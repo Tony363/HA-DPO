@@ -1,2 +1,6 @@
+ha_dpo/data/*
+*.png
+*.jpg
+*.zip
 **__pycache__**
 **.ipynb_checkpoints

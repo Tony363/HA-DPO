@@ -234,4 +234,24 @@ def main():
         yaml.dump(script_args, f)
     
 if __name__ == "__main__":
+    """
+    accelerate launch --main_process_port $RANDOM ha_dpo/models/minigpt4/train_dpo.py \
+    --cfg_path ha_dpo/models/minigpt4/train_configs/minigpt4_llama2_stage3_dpo.yaml \
+    --pope_train_data_path ha_dpo/data/hadpo/minigpt4/pope_data.json \
+    --desc_train_data_path ha_dpo/data/hadpo/minigpt4/desc_data.json \
+    --vg_path ha_dpo/data/VG \
+    --auxilary True \
+    --ccsbualign_data_path ha_dpo/data/lubal_sed_training \
+    --lora_r 64 \
+    --gradient_checkpointing False \
+    --per_device_train_batch_size 1 \
+    --learning_rate 1e-4 \
+    --beta 0.1 \
+    --gamma 0.5 \
+    --gradient_accumulation_steps 4 \
+    --max_steps 1000 \
+    --output_dir 'ha_dpo/models/minigpt4/minigpt4/output/sed_minigpt4_hadpo' \
+    --logging_steps 4
+    
+    """
     main()

@@ -2,4 +2,4 @@ datasets:
   cc_sbu_align:
     data_type: images
     build_info:
-      storage: ''
+      storage: /home/tony/HA-DPO/ha_dpo/data/lubal_sed_training
