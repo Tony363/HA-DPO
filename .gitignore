@@ -1,4 +1,8 @@
-ha_dpo/data/*
+wandb/*
+ha_dpo/data/VG/*
+ha_dpo/data/lubal_sed_training/*
+ha_dpo/data/lubal_sed_testing/*
+
 *.png
 *.jpg
 *.zip
