@@ -1,0 +1,32 @@
+[2024-03-31 20:08:07,200] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Loading VIT
+Loading VIT Done
+Loading Q-Former
+Loading Q-Former Done
+Loading LLAMA
+lora parameters:
+lora_r: 64
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: ['q_proj', 'k_proj', 'v_proj']
+trainable params: 50,331,648 || all params: 6,788,755,456 || trainable%: 0.7413972756304863
+Loading LLAMA Done
+freeze weight for lora only finetuning
+freeze bias for lora only finetuning
+Load 4 training prompts
+Prompt Example 
+###Human: <Img><ImageHere></Img>Is the person looking straight at the screen?  ###Assistant: 
+Load BLIP2-LLM Checkpoint: /home/tony/HA-DPO/ha_dpo/models/minigpt4/prerained_minigpt4_7b.pth
+Loading VIT
+Loading VIT Done
+Loading Q-Former
+Loading Q-Former Done
+Loading LLAMA
+Loading LLAMA Done
+freeze weight for lora only finetuning
+freeze bias for lora only finetuning
+Load 4 training prompts
+Prompt Example 
+###Human: <Img><ImageHere></Img>Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away? ###Assistant: 
+Load BLIP2-LLM Checkpoint: /home/tony/HA-DPO/ha_dpo/models/minigpt4/prerained_minigpt4_7b.pth
+Load CCSBUAlign Data...

@@ -111,10 +111,10 @@ class MyCallback(TrainerCallback):
     "A callback that prints a message at the end of training"
     def on_train_end(self, args, state, control, **kwargs):
         # save training arguments
-        if "LOCAL_RANK" not in os.environ or int(os.environ["LOCAL_RANK"]) == 0:
-            print("Save model in the end of training")
-            with open(os.path.join(args.output_dir, "training_args.yaml"), "w") as f:
-                yaml.dump(args, f)
+        # if "LOCAL_RANK" not in os.environ or int(os.environ["LOCAL_RANK"]) == 0:
+        #     print("Save model in the end of training")
+        #     with open(os.path.join(args.output_dir, "training_args.yaml"), "w") as f:
+        #         yaml.dump(args, f)
         # save model
         if "LOCAL_RANK" not in os.environ or int(os.environ["LOCAL_RANK"]) == 0:
             # save lora weights
@@ -235,7 +235,7 @@ def main():
     
 if __name__ == "__main__":
     """
-    accelerate launch --main_process_port $RANDOM ha_dpo/models/minigpt4/train_dpo.py \
+    WANDB_MODE=dryrun accelerate launch --main_process_port $RANDOM ha_dpo/models/minigpt4/train_dpo.py \
     --cfg_path ha_dpo/models/minigpt4/train_configs/minigpt4_llama2_stage3_dpo.yaml \
     --pope_train_data_path ha_dpo/data/hadpo/minigpt4/pope_data.json \
     --desc_train_data_path ha_dpo/data/hadpo/minigpt4/desc_data.json \
@@ -248,10 +248,11 @@ if __name__ == "__main__":
     --learning_rate 1e-4 \
     --beta 0.1 \
     --gamma 0.5 \
-    --gradient_accumulation_steps 4 \
+    --gradient_accumulation_steps 1 \
     --max_steps 1000 \
     --output_dir 'ha_dpo/models/minigpt4/minigpt4/output/sed_minigpt4_hadpo' \
-    --logging_steps 4
+    --logging_steps 4 
+    > logs/sed_minigpt4_hadpo_student.txt
     
     """
     main()

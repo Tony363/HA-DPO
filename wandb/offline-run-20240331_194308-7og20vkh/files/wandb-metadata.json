@@ -1,0 +1,245 @@
+{
+    "os": "Linux-6.5.0-26-generic-x86_64-with-glibc2.35",
+    "python": "3.9.0",
+    "heartbeatAt": "2024-03-31T23:43:08.858156",
+    "startedAt": "2024-03-31T23:43:08.504867",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--cfg_path",
+        "ha_dpo/models/minigpt4/train_configs/minigpt4_llama2_stage3_dpo.yaml",
+        "--pope_train_data_path",
+        "ha_dpo/data/hadpo/minigpt4/pope_data.json",
+        "--desc_train_data_path",
+        "ha_dpo/data/hadpo/minigpt4/desc_data.json",
+        "--vg_path",
+        "ha_dpo/data/VG",
+        "--auxilary",
+        "True",
+        "--ccsbualign_data_path",
+        "ha_dpo/data/lubal_sed_training",
+        "--lora_r",
+        "64",
+        "--gradient_checkpointing",
+        "False",
+        "--per_device_train_batch_size",
+        "1",
+        "--learning_rate",
+        "1e-4",
+        "--beta",
+        "0.1",
+        "--gamma",
+        "0.5",
+        "--gradient_accumulation_steps",
+        "1",
+        "--max_steps",
+        "1000",
+        "--output_dir",
+        "ha_dpo/models/minigpt4/minigpt4/output/sed_minigpt4_hadpo",
+        "--logging_steps",
+        "4"
+    ],
+    "state": "running",
+    "program": "/home/tony/HA-DPO/ha_dpo/models/minigpt4/train_dpo.py",
+    "codePathLocal": "ha_dpo/models/minigpt4/train_dpo.py",
+    "codePath": "ha_dpo/models/minigpt4/train_dpo.py",
+    "git": {
+        "remote": "https://github.com/Tony363/HA-DPO.git",
+        "commit": "b36827b5ffa52650e99e8007be96fa0bc6813332"
+    },
+    "email": "pysolver33@gmail.com",
+    "root": "/home/tony/HA-DPO",
+    "host": "cis-a6000",
+    "username": "tony",
+    "executable": "/home/tony/anaconda3/envs/hadpo/bin/python",
+    "cpu_count": 16,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 2446.6191875,
+        "min": 1800.0,
+        "max": 4000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4538.127,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 3633.48,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 3705.291,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 4223.663,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 3637.697,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 4000.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1795.451,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1807.974,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 4000.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2151.295,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 3629.229,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1796.704,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 3255.2,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 3192.417,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 3839.982,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1800.0,
+            "max": 4000.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 1758.8579597473145,
+            "used": 1632.6514739990234
+        }
+    },
+    "gpu": "NVIDIA RTX A6000",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA RTX A6000",
+            "memory_total": 51527024640
+        },
+        {
+            "name": "NVIDIA RTX A6000",
+            "memory_total": 51527024640
+        }
+    ],
+    "memory": {
+        "total": 251.53790283203125
+    }
+}
