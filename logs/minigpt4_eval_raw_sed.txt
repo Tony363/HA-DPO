@@ -1,0 +1,14 @@
+Loading VIT
+Loading VIT Done
+Loading Q-Former
+Loading Q-Former Done
+Loading LLAMA
+Loading LLAMA Done
+Load BLIP2-LLM Checkpoint: /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/minigpt4_eval_student.pth
+USING DEVICE - cuda:0
+IMAGE - 165935_023
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORES tensor([0.9985, 0.6914, 0.6848])

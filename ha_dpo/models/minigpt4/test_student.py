@@ -1,0 +1,373 @@
+import json
+import os
+import re
+import random
+import logging
+import argparse
+import torch
+import torchmetrics
+import evaluate
+import numpy as np
+import pandas as pd
+import torch.backends.cudnn as cudnn
+
+from rich.logging import RichHandler
+from typing import Tuple
+
+from minigpt4.common.config import Config
+from minigpt4.conversation.conversation import ChatInference
+from minigpt4.common.registry import registry
+
+# imports modules for registration
+from minigpt4.datasets.builders import *
+from minigpt4.models import *
+from minigpt4.processors import *
+from minigpt4.runners import *
+from minigpt4.tasks import *
+
+
+class CONST:
+    answers=["screen","paper","away"]
+
+def get_reject(answer):
+    possible = [p for p in CONST.answers if p!=answer]
+    return possible
+
+def setup_seeds(seed:int)->None:
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+
+    cudnn.benchmark = False
+    cudnn.deterministic = True
+
+def init_logger() -> None:
+    logger = logging.getLogger("rich")
+    logger.setLevel(logging.WARNING)
+    logging.getLogger("PIL.PngImagePlugin").setLevel(logging.WARNING)
+    logging.getLogger("PIL.TiffImagePlugin").setLevel(logging.WARNING)
+    logging.getLogger('matplotlib').setLevel(logging.WARNING)
+    logging.getLogger('openai').setLevel(logging.WARNING)
+    logging.getLogger('urllib3').setLevel(logging.WARNING)
+
+    FORMAT = "%(name)s[%(process)d] " + \
+        "%(processName)s(%(threadName)s) " + \
+        "%(module)s:%(lineno)d  %(message)s"
+
+    formatter = logging.Formatter(
+        FORMAT,
+        datefmt="%Y%m%d %H:%M:%S"
+    )
+    logging.basicConfig(
+        level="NOTSET", format=FORMAT, handlers=[RichHandler()]
+    )
+
+    ch = logging.StreamHandler()
+    ch.setLevel(print)
+    ch.setFormatter(formatter)
+
+    logger.addHandler(ch)
+
+    print("Initializing ok.")
+
+
+def load_chat(
+    args:argparse.ArgumentParser,
+    annotate:bool=False,
+)->Tuple[ChatInference,torch.nn.Module]:
+    cfg = Config(args)
+    # cfg.config['model']['vit_model'] = 'musiq' # TODO automate this 
+    model_config = cfg.model_cfg
+    model_config.device_8bit = args.gpu_id
+    model_config.classes = args.classes
+    model_config.labels = args.labels
+    
+    model_cls = registry.get_model_class(model_config.arch)
+    model = model_cls.from_config(model_config).to(device='cuda:{}'.format(args.gpu_id))
+
+    vis_processor_cfg = cfg.datasets_cfg.cc_sbu_align.vis_processor.train
+    vis_processor = registry.get_processor_class(vis_processor_cfg.name).from_config(vis_processor_cfg)
+    chat = ChatInference(model, vis_processor, device='cuda:{}'.format(args.gpu_id),annotate=annotate,conv_rec=3)
+    print(f"USING DEVICE - {chat.model.device}")
+    # https://stackoverflow.com/questions/69546459/convert-hydra-omegaconf-config-to-python-nested-dict-list
+    return chat,model
+
+def evaluate_caption(
+    captions:list, 
+    responses:list,
+    metric:evaluate.load,
+    thres:int=0.5
+)->list:
+    scores = torch.zeros(len(captions))
+    for i,cap in enumerate(captions):
+        # Calculate METEOR score for each model response compared to captions
+        score = metric.compute(
+            predictions=[responses],
+            references=[cap]
+        )
+        scores[i] = score['meteor']
+    # Sort scores based on highest METEOR score
+    print("METEOR SCORES",scores)
+    pred = (scores > thres).int()
+    return torch.argmax(pred),scores[pred] if scores.sum() > 0 else -1,0
+
+def main(
+    num_classes:int=3,
+    a_set:list=[],
+)->None:
+    # init_logger()
+    args = parse_args()
+    setup_seeds(1000)
+    chat,model = load_chat(args=args,annotate=False) 
+    label = get_test_labels(
+        label_path=args.label_path
+    )
+
+    captions = [
+        'Person is looking straight at the screen',
+        'Person is looking down at the paper',
+        'Person is looking away'
+    ]
+    
+    queries = 'Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?'
+    f1_micro = torchmetrics.F1Score(task="multiclass", num_classes=num_classes,average='micro').to(chat.model.device) # average=None for all classes eval
+    pr_micro = torchmetrics.Precision(task="multiclass", average='micro', num_classes=num_classes).to(chat.model.device)
+    re_micro = torchmetrics.Recall(task="multiclass", average='micro', num_classes=num_classes).to(chat.model.device)
+    
+    f1_macro = torchmetrics.F1Score(task="multiclass", num_classes=num_classes,average='macro').to(chat.model.device)
+    pr_macro = torchmetrics.Precision(task="multiclass", average='macro', num_classes=num_classes).to(chat.model.device)
+    re_macro = torchmetrics.Recall(task="multiclass", average='macro', num_classes=num_classes).to(chat.model.device)
+    
+    meteor = evaluate.load('meteor')
+        
+    inference_samples = len(os.listdir(args.test_dir))
+    pred_table,target_table = torch.zeros(inference_samples).to(chat.model.device),torch.zeros(inference_samples).to(chat.model.device)
+    meteor_scores = torch.zeros(inference_samples)
+    eval_df = pd.DataFrame(
+        np.zeros((inference_samples,5),dtype=object),
+    ) 
+    eval_df.iloc[:,1] = queries
+    for sample,img_f in enumerate(os.listdir(args.test_dir)): 
+        if sample >= inference_samples:
+            break
+        
+        image_id = img_f.split('.')[0]
+        print(f"IMAGE - {image_id}")
+        print(f"LABEL - {label[image_id]}")
+        target_table[sample] = int(label[image_id][0]) 
+
+        message = chat.upload_img(os.path.join(args.test_dir,img_f))
+        print(f"MESSAGE - {message}")
+
+        print(f"PROMPT - {chat.default_prompt}")
+        a = chat.answer(queries,repetition_penalty=1.0)[0] # 1.0 is no penalty
+        print(f"ANSWER - {a}") 
+        
+        pred,m_score = evaluate_caption(captions,a,meteor)
+        pred_table[sample] = pred
+        if pred < 0:
+            pred_table[sample] = (target_table[sample] - 1) % num_classes
+            a_set.append({
+                'image_id':image_id, 
+                'chosen': label[image_id][-1],
+                'rejected':[a] + [cap for cap in captions if cap != label[image_id][-1]],
+                'question':queries
+            })
+            
+        meteor_scores[sample] = m_score
+        print("METEOR SCORE - {:.3f}".format(meteor_scores[:sample+1].sum()/sample+1))
+        
+        pred, target = pred_table[:sample+1],target_table[:sample+1]
+        f1_a,pr_a,rec_a = f1_macro(pred,target), pr_macro(pred,target),re_macro(pred,target)
+        f1_i,pr_i,rec_i = f1_micro(pred,target), pr_micro(pred,target),re_micro(pred,target)
+        print("FREE FORM MACRO: f1 - {:.3f}, pr - {:.3f}, re - {:.3f}".format(f1_a.item(),pr_a.item(),rec_a.item()))
+        print("FREE FORM MICRO: f1 - {:.3f}, pr - {:.3f}, re - {:.3f}".format(f1_i.item(),pr_i.item(),rec_i.item()))
+        
+        
+        eval_df.iloc[sample,0] = image_id
+        eval_df.iloc[sample,2] = a
+        eval_df.iloc[sample,3] = pred_table[sample].item()
+        eval_df.iloc[sample,4] = target_table[sample].item()
+    
+    with open(args.dpo_pairs,'w') as f:
+        json.dump(a_set,f,indent=4)
+    
+    out_file = args.test_dir.split('/')[-2]
+    eval_df.columns = ['image_id','question','answer','pred','label']
+    eval_df.to_csv(f'/home/tony/HA-DPO/csv/{out_file}.csv',index=False)
+
+
+def get_test_labels(
+    label_path:str
+)->dict:
+    label = {}
+    classes = np.array([
+        [0,'screen',"Person is looking straight at the screen"],
+        [1,'paper',"Person is looking down at the paper"],
+        [2,'away',"Person is looking away"]
+    ])
+    with open(label_path,'r') as f:
+        captions = json.load(f)
+        for pair in captions['annotations']:
+            label[pair['image_id']] = classes[[
+                ('screen' in pair['caption']),
+                ('paper' in pair['caption']),
+                ('away' in pair['caption'])
+            ]][0].tolist()
+    save = open(os.path.join('/'.join(label_path.split('/')[:-1]),'filter_cap_mod.json'),'w')
+    json.dump(label,save,indent=4)
+    save.close()
+    return label
+    
+def parse_args():
+    parser = argparse.ArgumentParser(description="Testing")
+
+    parser.add_argument('-cfg-path',"--cfg-path", required=True, help="path to configuration file.")
+    parser.add_argument('-classes',"--classes",type=int, default=3,help="The number of classes")
+    parser.add_argument("--gpu-id", type=int, default=0, help="specify the gpu to load the model.")
+    parser.add_argument(
+        "--test-dir", 
+        type=str, 
+        default='/data/tony/iccvw/testing/image', 
+        help="directory of images to evaluate"
+    )
+    parser.add_argument(
+        "--label-path", 
+        type=str, 
+        default='/data/tony/iccvw/testing/filter_cap.json', 
+        help="path to filter_cap.json"
+    )
+    parser.add_argument(
+        "--dpo-pairs", 
+        type=str, 
+        default='../../data/hadpo/minigpt4/baseline_pairs.json', 
+        help="outfile location for dpo pairs"
+    )
+    parser.add_argument(
+        '-labels','--labels', 
+        nargs='+',
+        default=[
+            "Person is looking at the screen.",
+            "Person is looking at the paper.",
+            "Person is looking away."
+        ] ,
+        help='Input captions of classes, order matters. Keep same order of captions for inference.', 
+        required=False
+    )
+    parser.add_argument(
+        "--options",
+        nargs="+",
+        help="override some settings in the used config, the key-value pair "
+        "in xxx=yyy format will be merged into config file (deprecate), "
+        "change to --cfg-options instead.",
+    )
+
+    args = parser.parse_args()
+    return args
+
+
+if __name__ == "__main__":
+    """
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id 0 \
+        --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_training/image \
+        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_training/filter_cap.json\
+        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/training_bal_baseline_pairs.json > /home/tony/HA-DPO/logs/minigpt4_train_sed_base.txt
+        
+        
+        
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id 0 \
+        --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
+        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json\
+        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_bal_baseline_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_base.txt
+    
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id 0 \
+        --test-dir /home/tony/daisee/image \
+        --label-path /home/tony/daisee/filter_cap.json\
+        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/daisee_baseline_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_daisee_base.txt
+    
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id 0 \
+        --test-dir /home/tony/handpicked/image \
+        --label-path /home/tony/handpicked/filter_cap.json\
+        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/handpicked_baseline_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_handpicked_base.txt
+        
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id 0 \
+        --test-dir /home/tony/luraw_sed_testing/image \
+        --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json\
+        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_raw_base_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_raw_base.txt
+        
+        
+        
+        
+        
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id 0 \
+        --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
+        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json\
+        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_bal_general_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_general.txt
+    
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id 0 \
+        --test-dir /home/tony/daisee/image \
+        --label-path /home/tony/daisee/filter_cap.json\
+        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/daisee_general_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_daisee_general.txt
+    
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id 0 \
+        --test-dir /home/tony/handpicked/image \
+        --label-path /home/tony/handpicked/filter_cap.json\
+        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/handpicked_general_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_handpicked_general.txt
+
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id 0 \
+        --test-dir /home/tony/luraw_sed_testing/image \
+        --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json\
+        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_general_raw_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_raw_general.txt   
+        
+        
+        
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id 0 \
+        --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
+        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json\
+        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_bal_sed_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_sed.txt
+    
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id 0 \
+        --test-dir /home/tony/daisee/image \
+        --label-path /home/tony/daisee/filter_cap.json\
+        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/daisee_sed_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_daisee_sed.txt
+    
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id 0 \
+        --test-dir /home/tony/handpicked/image \
+        --label-path /home/tony/handpicked/filter_cap.json\
+        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/handpicked_sed_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_handpicked_sed.txt
+    
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id 0 \
+        --test-dir /home/tony/luraw_sed_testing/image \
+        --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json\
+        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_raw_sed_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_raw_sed.txt
+    
+    """
+    main() 
+
+    

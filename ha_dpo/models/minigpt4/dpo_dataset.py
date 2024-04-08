@@ -35,7 +35,9 @@ class PopeDataset(Dataset):
         # visual genome
         self.vg_image_data = json.load(open(os.path.join(self.vg_path, "image_data.json")))
         self.id2path = {
-            _data["image_id"]:os.path.join(self.vg_path, _data["url"].split("/")[-2], _data["url"].split("/")[-1]) 
+            _data["image_id"]: os.path.join(self.vg_path,'image',_data['image_id']+'.jpg')\
+                if 'sed' in self.vg_path else\
+                    os.path.join(self.vg_path, _data["url"].split("/")[-2], _data["url"].split("/")[-1]) 
             for _data in self.vg_image_data
         }
         self.load_data()
@@ -62,13 +64,13 @@ class PopeDataset(Dataset):
         print('Load POPE Data...')
         for anno in tqdm.tqdm(self.data):
             image_id = anno["image_id"]
-            image_path = self.id2path[int(image_id)]
+            image_path = self.id2path[image_id]
             self.data_list.append({
                 "image_id": image_id,
                 "image_path": image_path,
                 "image": self.vis_processor(Image.open(image_path).convert("RGB")),
                 "chosen": anno["chosen"],
-                "rejected": anno["reject"],
+                "rejected": anno["rejected"],
                 "data_type": "pope",
                 "prompt": anno["question"],
             })
@@ -149,7 +151,9 @@ class AugmentedCaptionDataset(Dataset):
         # visual genome
         self.vg_image_data = json.load(open(os.path.join(self.vg_path, "image_data.json")))
         self.id2path = {
-            _data["image_id"]:os.path.join(self.vg_path, _data["url"].split("/")[-2], _data["url"].split("/")[-1]) 
+            _data["image_id"]: os.path.join(self.vg_path,'image',_data['image_id']+'.jpg')\
+                if 'sed' in self.vg_path else\
+                    os.path.join(self.vg_path, _data["url"].split("/")[-2], _data["url"].split("/")[-1]) 
             for _data in self.vg_image_data
         }
         
@@ -173,7 +177,7 @@ class AugmentedCaptionDataset(Dataset):
     def load_data(self, index):
         anno = self.data[index]
         image_id = anno["image_id"]
-        image_path = self.id2path[int(image_id)]
+        image_path = self.id2path[image_id]
         if self.sample_strategy == "online":
             chosen = random.choice(anno["chosen"])
             rejected = random.choice(anno["rejected"])
