@@ -1,0 +1,102 @@
+[
+    {
+        "image_id": "1110032059_frame_0001",
+        "chosen": "Person is looking straight at the screen",
+        "rejected": [
+            "1. Yes. 2. Yes. 3. No.",
+            "Person is looking down at the paper",
+            "Person is looking away"
+        ],
+        "question": "Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?"
+    },
+    {
+        "image_id": "2100592018_frame_0002",
+        "chosen": "Person is looking straight at the screen",
+        "rejected": [
+            "\u200b\u200b",
+            "Person is looking down at the paper",
+            "Person is looking away"
+        ],
+        "question": "Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?"
+    },
+    {
+        "image_id": "1110031038_frame_0009",
+        "chosen": "Person is looking straight at the screen",
+        "rejected": [
+            "1. Yes. 2. No. 3. Yes. 4. No.",
+            "Person is looking down at the paper",
+            "Person is looking away"
+        ],
+        "question": "Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?"
+    },
+    {
+        "image_id": "2100591072_frame_0008",
+        "chosen": "Person is looking straight at the screen",
+        "rejected": [
+            "1. Yes\n2. Yes\n3. No\n4. No\n5. No\n6. Yes\n7. No\n8. Yes\n9. Yes\n10. No\n11. Yes\n12. Yes\n13. No\n14. No\n15. Yes\n16. No\n17. Yes\n18. Yes\n19. No\n20. No\n21. Yes\n22. Yes\n23. No\n24. Yes\n25. No\n26. Yes\n27. No\n28. Yes\n29. No\n30. Yes\n31. No\n32. Yes\n33. No\n34. Yes\n35. No\n36. Yes\n37. No\n38. Yes\n39. No\n40. Yes\n41. No\n42. Yes\n43. No\n44. Yes\n45. No\n46. Yes\n47. No\n48. Yes\n49. No\n50. Yes\n51. No\n52. Yes\n53. No\n54. Yes\n55. No\n56. Yes\n57. No\n58. Yes\n59. No\n60. Yes\n61. No\n62. Yes",
+            "Person is looking down at the paper",
+            "Person is looking away"
+        ],
+        "question": "Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?"
+    },
+    {
+        "image_id": "2100611059_frame_0002",
+        "chosen": "Person is looking straight at the screen",
+        "rejected": [
+            "1. Yes. 2. Yes. 3. No.",
+            "Person is looking down at the paper",
+            "Person is looking away"
+        ],
+        "question": "Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?"
+    },
+    {
+        "image_id": "2000481040_frame_0010",
+        "chosen": "Person is looking straight at the screen",
+        "rejected": [
+            "\u200b",
+            "Person is looking down at the paper",
+            "Person is looking away"
+        ],
+        "question": "Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?"
+    },
+    {
+        "image_id": "4140810138_frame_0007",
+        "chosen": "Person is looking straight at the screen",
+        "rejected": [
+            "\u200b",
+            "Person is looking down at the paper",
+            "Person is looking away"
+        ],
+        "question": "Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?"
+    },
+    {
+        "image_id": "2100531081_frame_0002",
+        "chosen": "Person is looking straight at the screen",
+        "rejected": [
+            "\u200b",
+            "Person is looking down at the paper",
+            "Person is looking away"
+        ],
+        "question": "Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?"
+    },
+    {
+        "image_id": "3100642011_frame_0003",
+        "chosen": "Person is looking straight at the screen",
+        "rejected": [
+            "1. Yes. 2. Yes. 3. Yes.",
+            "Person is looking down at the paper",
+            "Person is looking away"
+        ],
+        "question": "Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?"
+    },
+    {
+        "image_id": "2026140134_frame_0008",
+        "chosen": "Person is looking straight at the screen",
+        "rejected": [
+            "\u200b",
+            "Person is looking down at the paper",
+            "Person is looking away"
+        ],
+        "question": "Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?"
+    }
+]

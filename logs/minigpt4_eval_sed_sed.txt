@@ -1,0 +1,3176 @@
+Loading VIT
+Loading VIT Done
+Loading Q-Former
+Loading Q-Former Done
+Loading LLAMA
+Loading LLAMA Done
+Load BLIP2-LLM Checkpoint: /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/minigpt4_eval_student.pth
+USING DEVICE - cuda:0
+IMAGE - 165113_031
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.691
+FREE FORM MACRO: f1 - 0.000, pr - 0.000, re - 0.000
+FREE FORM MICRO: f1 - 0.000, pr - 0.000, re - 0.000
+IMAGE - 166311_001
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.845
+FREE FORM MACRO: f1 - 0.333, pr - 0.250, re - 0.500
+FREE FORM MICRO: f1 - 0.500, pr - 0.500, re - 0.500
+IMAGE - 181423_32
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.794
+FREE FORM MACRO: f1 - 0.250, pr - 0.167, re - 0.500
+FREE FORM MICRO: f1 - 0.333, pr - 0.333, re - 0.333
+IMAGE - 164413_023
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.768
+FREE FORM MACRO: f1 - 0.200, pr - 0.125, re - 0.500
+FREE FORM MICRO: f1 - 0.250, pr - 0.250, re - 0.250
+IMAGE - 164503_083
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.813
+FREE FORM MACRO: f1 - 0.133, pr - 0.083, re - 0.333
+FREE FORM MICRO: f1 - 0.200, pr - 0.200, re - 0.200
+IMAGE - 164655_049
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.843
+FREE FORM MACRO: f1 - 0.356, pr - 0.250, re - 0.667
+FREE FORM MICRO: f1 - 0.333, pr - 0.333, re - 0.333
+IMAGE - 181448_62
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.821
+FREE FORM MACRO: f1 - 0.333, pr - 0.233, re - 0.667
+FREE FORM MICRO: f1 - 0.286, pr - 0.286, re - 0.286
+IMAGE - 169804_021
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.805
+FREE FORM MACRO: f1 - 0.317, pr - 0.222, re - 0.667
+FREE FORM MICRO: f1 - 0.250, pr - 0.250, re - 0.250
+IMAGE - 166177_38
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.826
+FREE FORM MACRO: f1 - 0.362, pr - 0.278, re - 0.667
+FREE FORM MICRO: f1 - 0.333, pr - 0.333, re - 0.333
+IMAGE - 181449_58
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.812
+FREE FORM MACRO: f1 - 0.350, pr - 0.270, re - 0.667
+FREE FORM MICRO: f1 - 0.300, pr - 0.300, re - 0.300
+IMAGE - 181483_11
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.829
+FREE FORM MACRO: f1 - 0.400, pr - 0.306, re - 0.667
+FREE FORM MICRO: f1 - 0.364, pr - 0.364, re - 0.364
+IMAGE - 165125_024
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.843
+FREE FORM MACRO: f1 - 0.433, pr - 0.333, re - 0.667
+FREE FORM MICRO: f1 - 0.417, pr - 0.417, re - 0.417
+IMAGE - 165006_038
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.832
+FREE FORM MACRO: f1 - 0.421, pr - 0.322, re - 0.667
+FREE FORM MICRO: f1 - 0.385, pr - 0.385, re - 0.385
+IMAGE - 164483_038
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.844
+FREE FORM MACRO: f1 - 0.444, pr - 0.343, re - 0.667
+FREE FORM MICRO: f1 - 0.429, pr - 0.429, re - 0.429
+IMAGE - 181449_7
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.833
+FREE FORM MACRO: f1 - 0.433, pr - 0.333, re - 0.667
+FREE FORM MICRO: f1 - 0.400, pr - 0.400, re - 0.400
+IMAGE - 166060_077
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.825
+FREE FORM MACRO: f1 - 0.424, pr - 0.325, re - 0.667
+FREE FORM MICRO: f1 - 0.375, pr - 0.375, re - 0.375
+IMAGE - 164907_021
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.834
+FREE FORM MACRO: f1 - 0.379, pr - 0.269, re - 0.667
+FREE FORM MICRO: f1 - 0.353, pr - 0.353, re - 0.353
+IMAGE - 164834_016
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.844
+FREE FORM MACRO: f1 - 0.398, pr - 0.286, re - 0.667
+FREE FORM MICRO: f1 - 0.389, pr - 0.389, re - 0.389
+IMAGE - 164503_053
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.852
+FREE FORM MACRO: f1 - 0.413, pr - 0.300, re - 0.667
+FREE FORM MICRO: f1 - 0.421, pr - 0.421, re - 0.421
+IMAGE - 166040_009
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.859
+FREE FORM MACRO: f1 - 0.372, pr - 0.292, re - 0.556
+FREE FORM MICRO: f1 - 0.400, pr - 0.400, re - 0.400
+IMAGE - 169829_016
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.866
+FREE FORM MACRO: f1 - 0.385, pr - 0.304, re - 0.556
+FREE FORM MICRO: f1 - 0.429, pr - 0.429, re - 0.429
+IMAGE - 166173_72
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.872
+FREE FORM MACRO: f1 - 0.396, pr - 0.315, re - 0.556
+FREE FORM MICRO: f1 - 0.455, pr - 0.455, re - 0.455
+IMAGE - 164322_033
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.877
+FREE FORM MACRO: f1 - 0.364, pr - 0.281, re - 0.519
+FREE FORM MICRO: f1 - 0.435, pr - 0.435, re - 0.435
+IMAGE - 165009_066
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.869
+FREE FORM MACRO: f1 - 0.357, pr - 0.274, re - 0.519
+FREE FORM MICRO: f1 - 0.417, pr - 0.417, re - 0.417
+IMAGE - 169835_011
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.874
+FREE FORM MACRO: f1 - 0.367, pr - 0.283, re - 0.522
+FREE FORM MICRO: f1 - 0.440, pr - 0.440, re - 0.440
+IMAGE - 181420_10
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.867
+FREE FORM MACRO: f1 - 0.360, pr - 0.276, re - 0.522
+FREE FORM MICRO: f1 - 0.423, pr - 0.423, re - 0.423
+IMAGE - 165728_010
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.872
+FREE FORM MACRO: f1 - 0.369, pr - 0.285, re - 0.525
+FREE FORM MICRO: f1 - 0.444, pr - 0.444, re - 0.444
+IMAGE - 166191_51
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.877
+FREE FORM MACRO: f1 - 0.376, pr - 0.293, re - 0.528
+FREE FORM MICRO: f1 - 0.464, pr - 0.464, re - 0.464
+IMAGE - 181423_85
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.870
+FREE FORM MACRO: f1 - 0.370, pr - 0.286, re - 0.528
+FREE FORM MICRO: f1 - 0.448, pr - 0.448, re - 0.448
+IMAGE - 166160_72
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.875
+FREE FORM MACRO: f1 - 0.377, pr - 0.293, re - 0.530
+FREE FORM MICRO: f1 - 0.467, pr - 0.467, re - 0.467
+IMAGE - 164458_092
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.879
+FREE FORM MACRO: f1 - 0.383, pr - 0.300, re - 0.532
+FREE FORM MICRO: f1 - 0.484, pr - 0.484, re - 0.484
+IMAGE - 165937_019
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.882
+FREE FORM MACRO: f1 - 0.389, pr - 0.306, re - 0.533
+FREE FORM MICRO: f1 - 0.500, pr - 0.500, re - 0.500
+IMAGE - 166172_196
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.886
+FREE FORM MACRO: f1 - 0.394, pr - 0.312, re - 0.535
+FREE FORM MICRO: f1 - 0.515, pr - 0.515, re - 0.515
+IMAGE - 164453_005
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.889
+FREE FORM MACRO: f1 - 0.370, pr - 0.290, re - 0.516
+FREE FORM MICRO: f1 - 0.500, pr - 0.500, re - 0.500
+IMAGE - 164322_025
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.892
+FREE FORM MACRO: f1 - 0.375, pr - 0.295, re - 0.519
+FREE FORM MICRO: f1 - 0.514, pr - 0.514, re - 0.514
+IMAGE - 164390_020
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.895
+FREE FORM MACRO: f1 - 0.379, pr - 0.300, re - 0.520
+FREE FORM MICRO: f1 - 0.528, pr - 0.528, re - 0.528
+IMAGE - 164516_007
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.898
+FREE FORM MACRO: f1 - 0.383, pr - 0.305, re - 0.522
+FREE FORM MICRO: f1 - 0.541, pr - 0.541, re - 0.541
+IMAGE - 164693_092
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.892
+FREE FORM MACRO: f1 - 0.379, pr - 0.299, re - 0.522
+FREE FORM MICRO: f1 - 0.526, pr - 0.526, re - 0.526
+IMAGE - 164835_040
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.895
+FREE FORM MACRO: f1 - 0.364, pr - 0.283, re - 0.522
+FREE FORM MICRO: f1 - 0.513, pr - 0.513, re - 0.513
+IMAGE - 164659_008
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.898
+FREE FORM MACRO: f1 - 0.368, pr - 0.287, re - 0.524
+FREE FORM MICRO: f1 - 0.525, pr - 0.525, re - 0.525
+IMAGE - 166198_003
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.900
+FREE FORM MACRO: f1 - 0.371, pr - 0.291, re - 0.525
+FREE FORM MICRO: f1 - 0.537, pr - 0.537, re - 0.537
+IMAGE - 166160_53
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.902
+FREE FORM MACRO: f1 - 0.405, pr - 0.321, re - 0.553
+FREE FORM MICRO: f1 - 0.548, pr - 0.548, re - 0.548
+IMAGE - 164326_027
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.904
+FREE FORM MACRO: f1 - 0.429, pr - 0.344, re - 0.570
+FREE FORM MICRO: f1 - 0.558, pr - 0.558, re - 0.558
+IMAGE - 164470_009
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.906
+FREE FORM MACRO: f1 - 0.446, pr - 0.363, re - 0.581
+FREE FORM MICRO: f1 - 0.568, pr - 0.568, re - 0.568
+IMAGE - 166172_203
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.908
+FREE FORM MACRO: f1 - 0.450, pr - 0.367, re - 0.582
+FREE FORM MICRO: f1 - 0.578, pr - 0.578, re - 0.578
+IMAGE - 164390_047
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.904
+FREE FORM MACRO: f1 - 0.446, pr - 0.361, re - 0.582
+FREE FORM MICRO: f1 - 0.565, pr - 0.565, re - 0.565
+IMAGE - 165979_009
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.906
+FREE FORM MACRO: f1 - 0.429, pr - 0.356, re - 0.542
+FREE FORM MICRO: f1 - 0.553, pr - 0.553, re - 0.553
+IMAGE - 166168_12
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.908
+FREE FORM MACRO: f1 - 0.433, pr - 0.360, re - 0.544
+FREE FORM MICRO: f1 - 0.562, pr - 0.562, re - 0.562
+IMAGE - 164397_026
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.903
+FREE FORM MACRO: f1 - 0.429, pr - 0.355, re - 0.544
+FREE FORM MICRO: f1 - 0.551, pr - 0.551, re - 0.551
+IMAGE - 165090_050
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.905
+FREE FORM MACRO: f1 - 0.443, pr - 0.370, re - 0.556
+FREE FORM MICRO: f1 - 0.560, pr - 0.560, re - 0.560
+IMAGE - 165959_120
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.901
+FREE FORM MACRO: f1 - 0.440, pr - 0.365, re - 0.556
+FREE FORM MICRO: f1 - 0.549, pr - 0.549, re - 0.549
+IMAGE - 164856_043
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.903
+FREE FORM MACRO: f1 - 0.429, pr - 0.350, re - 0.556
+FREE FORM MICRO: f1 - 0.538, pr - 0.538, re - 0.538
+IMAGE - 169847_019
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.904
+FREE FORM MACRO: f1 - 0.432, pr - 0.354, re - 0.557
+FREE FORM MICRO: f1 - 0.547, pr - 0.547, re - 0.547
+IMAGE - 166250_063
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.906
+FREE FORM MACRO: f1 - 0.444, pr - 0.366, re - 0.566
+FREE FORM MICRO: f1 - 0.556, pr - 0.556, re - 0.556
+IMAGE - 164420_020
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.908
+FREE FORM MACRO: f1 - 0.455, pr - 0.377, re - 0.573
+FREE FORM MICRO: f1 - 0.564, pr - 0.564, re - 0.564
+IMAGE - 169831_017
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.904
+FREE FORM MACRO: f1 - 0.451, pr - 0.373, re - 0.573
+FREE FORM MICRO: f1 - 0.554, pr - 0.554, re - 0.554
+IMAGE - 164674_271
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.900
+FREE FORM MACRO: f1 - 0.448, pr - 0.369, re - 0.573
+FREE FORM MICRO: f1 - 0.544, pr - 0.544, re - 0.544
+IMAGE - 164693_082
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.902
+FREE FORM MACRO: f1 - 0.439, pr - 0.356, re - 0.573
+FREE FORM MICRO: f1 - 0.534, pr - 0.534, re - 0.534
+IMAGE - 165100_003
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.903
+FREE FORM MACRO: f1 - 0.442, pr - 0.360, re - 0.574
+FREE FORM MICRO: f1 - 0.542, pr - 0.542, re - 0.542
+IMAGE - 164693_025
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.905
+FREE FORM MACRO: f1 - 0.451, pr - 0.369, re - 0.580
+FREE FORM MICRO: f1 - 0.550, pr - 0.550, re - 0.550
+IMAGE - 169803_007
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.906
+FREE FORM MACRO: f1 - 0.458, pr - 0.378, re - 0.585
+FREE FORM MICRO: f1 - 0.557, pr - 0.557, re - 0.557
+IMAGE - 164317_047
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.908
+FREE FORM MACRO: f1 - 0.465, pr - 0.386, re - 0.590
+FREE FORM MICRO: f1 - 0.565, pr - 0.565, re - 0.565
+IMAGE - 164659_030
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.909
+FREE FORM MACRO: f1 - 0.455, pr - 0.375, re - 0.578
+FREE FORM MICRO: f1 - 0.556, pr - 0.556, re - 0.556
+IMAGE - 166164_13
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.461, pr - 0.382, re - 0.582
+FREE FORM MICRO: f1 - 0.562, pr - 0.562, re - 0.562
+IMAGE - 166426_028
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.454, pr - 0.372, re - 0.582
+FREE FORM MICRO: f1 - 0.554, pr - 0.554, re - 0.554
+IMAGE - 164838_010
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.460, pr - 0.379, re - 0.585
+FREE FORM MICRO: f1 - 0.561, pr - 0.561, re - 0.561
+IMAGE - 164734_042
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.909
+FREE FORM MACRO: f1 - 0.450, pr - 0.375, re - 0.567
+FREE FORM MICRO: f1 - 0.552, pr - 0.552, re - 0.552
+IMAGE - 164844_083
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.456, pr - 0.381, re - 0.571
+FREE FORM MICRO: f1 - 0.559, pr - 0.559, re - 0.559
+IMAGE - 169829_100
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.459, pr - 0.384, re - 0.572
+FREE FORM MICRO: f1 - 0.565, pr - 0.565, re - 0.565
+IMAGE - 165088_031
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.909
+FREE FORM MACRO: f1 - 0.456, pr - 0.380, re - 0.572
+FREE FORM MICRO: f1 - 0.557, pr - 0.557, re - 0.557
+IMAGE - 165006_046
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.906
+FREE FORM MACRO: f1 - 0.453, pr - 0.377, re - 0.572
+FREE FORM MICRO: f1 - 0.549, pr - 0.549, re - 0.549
+IMAGE - 165029_083
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.907
+FREE FORM MACRO: f1 - 0.456, pr - 0.380, re - 0.573
+FREE FORM MICRO: f1 - 0.556, pr - 0.556, re - 0.556
+IMAGE - 165088_042
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.904
+FREE FORM MACRO: f1 - 0.453, pr - 0.376, re - 0.573
+FREE FORM MICRO: f1 - 0.548, pr - 0.548, re - 0.548
+IMAGE - 164758_002
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.905
+FREE FORM MACRO: f1 - 0.456, pr - 0.379, re - 0.575
+FREE FORM MICRO: f1 - 0.554, pr - 0.554, re - 0.554
+IMAGE - 169812_041
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.902
+FREE FORM MACRO: f1 - 0.453, pr - 0.376, re - 0.575
+FREE FORM MICRO: f1 - 0.547, pr - 0.547, re - 0.547
+IMAGE - 169847_010
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.904
+FREE FORM MACRO: f1 - 0.456, pr - 0.379, re - 0.576
+FREE FORM MICRO: f1 - 0.553, pr - 0.553, re - 0.553
+IMAGE - 165006_079
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.905
+FREE FORM MACRO: f1 - 0.460, pr - 0.384, re - 0.579
+FREE FORM MICRO: f1 - 0.558, pr - 0.558, re - 0.558
+IMAGE - 167853_008
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.906
+FREE FORM MACRO: f1 - 0.463, pr - 0.387, re - 0.580
+FREE FORM MICRO: f1 - 0.564, pr - 0.564, re - 0.564
+IMAGE - 164421_038
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.903
+FREE FORM MACRO: f1 - 0.460, pr - 0.384, re - 0.580
+FREE FORM MICRO: f1 - 0.557, pr - 0.557, re - 0.557
+IMAGE - 169814_068
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.901
+FREE FORM MACRO: f1 - 0.458, pr - 0.381, re - 0.580
+FREE FORM MICRO: f1 - 0.550, pr - 0.550, re - 0.550
+IMAGE - 165020_019
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.898
+FREE FORM MACRO: f1 - 0.455, pr - 0.378, re - 0.580
+FREE FORM MICRO: f1 - 0.543, pr - 0.543, re - 0.543
+IMAGE - 165088_059
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.899
+FREE FORM MACRO: f1 - 0.458, pr - 0.381, re - 0.581
+FREE FORM MICRO: f1 - 0.549, pr - 0.549, re - 0.549
+IMAGE - 164847_132
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.900
+FREE FORM MACRO: f1 - 0.462, pr - 0.386, re - 0.584
+FREE FORM MICRO: f1 - 0.554, pr - 0.554, re - 0.554
+IMAGE - 181448_5
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.902
+FREE FORM MACRO: f1 - 0.465, pr - 0.388, re - 0.585
+FREE FORM MICRO: f1 - 0.560, pr - 0.560, re - 0.560
+IMAGE - 165088_077
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.903
+FREE FORM MACRO: f1 - 0.469, pr - 0.393, re - 0.587
+FREE FORM MICRO: f1 - 0.565, pr - 0.565, re - 0.565
+IMAGE - 169839_071
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.904
+FREE FORM MACRO: f1 - 0.471, pr - 0.396, re - 0.588
+FREE FORM MICRO: f1 - 0.570, pr - 0.570, re - 0.570
+IMAGE - 164412_027
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.905
+FREE FORM MACRO: f1 - 0.473, pr - 0.398, re - 0.589
+FREE FORM MICRO: f1 - 0.575, pr - 0.575, re - 0.575
+IMAGE - 169825_013
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.906
+FREE FORM MACRO: f1 - 0.475, pr - 0.401, re - 0.590
+FREE FORM MICRO: f1 - 0.580, pr - 0.580, re - 0.580
+IMAGE - 164327_069
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.907
+FREE FORM MACRO: f1 - 0.477, pr - 0.403, re - 0.590
+FREE FORM MICRO: f1 - 0.584, pr - 0.584, re - 0.584
+IMAGE - 164878_038
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.908
+FREE FORM MACRO: f1 - 0.479, pr - 0.405, re - 0.591
+FREE FORM MICRO: f1 - 0.589, pr - 0.589, re - 0.589
+IMAGE - 164847_021
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.909
+FREE FORM MACRO: f1 - 0.474, pr - 0.397, re - 0.591
+FREE FORM MICRO: f1 - 0.582, pr - 0.582, re - 0.582
+IMAGE - 165932_005
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.476, pr - 0.400, re - 0.592
+FREE FORM MICRO: f1 - 0.587, pr - 0.587, re - 0.587
+IMAGE - 166013_043
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.478, pr - 0.402, re - 0.592
+FREE FORM MICRO: f1 - 0.591, pr - 0.591, re - 0.591
+IMAGE - 167843_014
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.480, pr - 0.404, re - 0.593
+FREE FORM MICRO: f1 - 0.596, pr - 0.596, re - 0.596
+IMAGE - 169831_010
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.481, pr - 0.406, re - 0.593
+FREE FORM MICRO: f1 - 0.600, pr - 0.600, re - 0.600
+IMAGE - 166160_41
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.485, pr - 0.410, re - 0.596
+FREE FORM MICRO: f1 - 0.604, pr - 0.604, re - 0.604
+IMAGE - 164674_311
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.480, pr - 0.403, re - 0.596
+FREE FORM MICRO: f1 - 0.598, pr - 0.598, re - 0.598
+IMAGE - 169828_051
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.482, pr - 0.405, re - 0.596
+FREE FORM MICRO: f1 - 0.602, pr - 0.602, re - 0.602
+IMAGE - 165088_064
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.485, pr - 0.409, re - 0.598
+FREE FORM MICRO: f1 - 0.606, pr - 0.606, re - 0.606
+IMAGE - 166163_12
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.483, pr - 0.406, re - 0.598
+FREE FORM MICRO: f1 - 0.600, pr - 0.600, re - 0.600
+IMAGE - 169826_041
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.481, pr - 0.404, re - 0.598
+FREE FORM MICRO: f1 - 0.594, pr - 0.594, re - 0.594
+IMAGE - 164845_031
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.483, pr - 0.406, re - 0.599
+FREE FORM MICRO: f1 - 0.598, pr - 0.598, re - 0.598
+IMAGE - 166160_35
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.486, pr - 0.409, re - 0.601
+FREE FORM MICRO: f1 - 0.602, pr - 0.602, re - 0.602
+IMAGE - 166311_004
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.488, pr - 0.411, re - 0.601
+FREE FORM MICRO: f1 - 0.606, pr - 0.606, re - 0.606
+IMAGE - 167847_008
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.491, pr - 0.415, re - 0.603
+FREE FORM MICRO: f1 - 0.610, pr - 0.610, re - 0.610
+IMAGE - 164317_072
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.487, pr - 0.408, re - 0.603
+FREE FORM MICRO: f1 - 0.604, pr - 0.604, re - 0.604
+IMAGE - 166179_64
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.485, pr - 0.406, re - 0.603
+FREE FORM MICRO: f1 - 0.598, pr - 0.598, re - 0.598
+IMAGE - 166184_4
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.486, pr - 0.408, re - 0.604
+FREE FORM MICRO: f1 - 0.602, pr - 0.602, re - 0.602
+IMAGE - 165956_044
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.484, pr - 0.405, re - 0.604
+FREE FORM MICRO: f1 - 0.596, pr - 0.596, re - 0.596
+IMAGE - 164462_037
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.478, pr - 0.403, re - 0.592
+FREE FORM MICRO: f1 - 0.591, pr - 0.591, re - 0.591
+IMAGE - 165121_010
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.479, pr - 0.404, re - 0.592
+FREE FORM MICRO: f1 - 0.595, pr - 0.595, re - 0.595
+IMAGE - 169828_036
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.481, pr - 0.406, re - 0.593
+FREE FORM MICRO: f1 - 0.598, pr - 0.598, re - 0.598
+IMAGE - 165956_023
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.477, pr - 0.400, re - 0.593
+FREE FORM MICRO: f1 - 0.593, pr - 0.593, re - 0.593
+IMAGE - 169829_119
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.478, pr - 0.402, re - 0.593
+FREE FORM MICRO: f1 - 0.596, pr - 0.596, re - 0.596
+IMAGE - 164454_036
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.481, pr - 0.405, re - 0.595
+FREE FORM MICRO: f1 - 0.600, pr - 0.600, re - 0.600
+IMAGE - 164458_017
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.480, pr - 0.403, re - 0.595
+FREE FORM MICRO: f1 - 0.595, pr - 0.595, re - 0.595
+IMAGE - 165088_097
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.483, pr - 0.406, re - 0.597
+FREE FORM MICRO: f1 - 0.598, pr - 0.598, re - 0.598
+IMAGE - 166196_059
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.485, pr - 0.410, re - 0.599
+FREE FORM MICRO: f1 - 0.602, pr - 0.602, re - 0.602
+IMAGE - 164413_031
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.484, pr - 0.407, re - 0.599
+FREE FORM MICRO: f1 - 0.597, pr - 0.597, re - 0.597
+IMAGE - 165006_072
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.486, pr - 0.410, re - 0.601
+FREE FORM MICRO: f1 - 0.600, pr - 0.600, re - 0.600
+IMAGE - 164845_012
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.488, pr - 0.412, re - 0.601
+FREE FORM MICRO: f1 - 0.603, pr - 0.603, re - 0.603
+IMAGE - 165026_061
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.484, pr - 0.406, re - 0.601
+FREE FORM MICRO: f1 - 0.598, pr - 0.598, re - 0.598
+IMAGE - 166160_25
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.486, pr - 0.409, re - 0.603
+FREE FORM MICRO: f1 - 0.602, pr - 0.602, re - 0.602
+IMAGE - 181428_89
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.488, pr - 0.411, re - 0.603
+FREE FORM MICRO: f1 - 0.605, pr - 0.605, re - 0.605
+IMAGE - 165007_001
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.489, pr - 0.413, re - 0.603
+FREE FORM MICRO: f1 - 0.608, pr - 0.608, re - 0.608
+IMAGE - 164668_010
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.484, pr - 0.407, re - 0.598
+FREE FORM MICRO: f1 - 0.603, pr - 0.603, re - 0.603
+IMAGE - 181448_49
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.482, pr - 0.405, re - 0.598
+FREE FORM MICRO: f1 - 0.598, pr - 0.598, re - 0.598
+IMAGE - 165742_021
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.484, pr - 0.407, re - 0.598
+FREE FORM MICRO: f1 - 0.602, pr - 0.602, re - 0.602
+IMAGE - 165968_046
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.485, pr - 0.408, re - 0.598
+FREE FORM MICRO: f1 - 0.605, pr - 0.605, re - 0.605
+IMAGE - 166160_10
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.487, pr - 0.411, re - 0.600
+FREE FORM MICRO: f1 - 0.608, pr - 0.608, re - 0.608
+IMAGE - 169827_032
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.486, pr - 0.409, re - 0.600
+FREE FORM MICRO: f1 - 0.603, pr - 0.603, re - 0.603
+IMAGE - 169829_127
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.484, pr - 0.407, re - 0.600
+FREE FORM MICRO: f1 - 0.598, pr - 0.598, re - 0.598
+IMAGE - 164420_030
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.485, pr - 0.408, re - 0.600
+FREE FORM MICRO: f1 - 0.602, pr - 0.602, re - 0.602
+IMAGE - 169800_033
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.488, pr - 0.411, re - 0.602
+FREE FORM MICRO: f1 - 0.604, pr - 0.604, re - 0.604
+IMAGE - 167843_107
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.489, pr - 0.413, re - 0.602
+FREE FORM MICRO: f1 - 0.607, pr - 0.607, re - 0.607
+IMAGE - 164907_039
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.490, pr - 0.414, re - 0.602
+FREE FORM MICRO: f1 - 0.610, pr - 0.610, re - 0.610
+IMAGE - 164458_048
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.489, pr - 0.412, re - 0.602
+FREE FORM MICRO: f1 - 0.606, pr - 0.606, re - 0.606
+IMAGE - 181440_3
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.490, pr - 0.414, re - 0.603
+FREE FORM MICRO: f1 - 0.609, pr - 0.609, re - 0.609
+IMAGE - 169822_022
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.491, pr - 0.415, re - 0.603
+FREE FORM MICRO: f1 - 0.612, pr - 0.612, re - 0.612
+IMAGE - 164325_031
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.489, pr - 0.413, re - 0.603
+FREE FORM MICRO: f1 - 0.607, pr - 0.607, re - 0.607
+IMAGE - 181475_22
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.486, pr - 0.408, re - 0.603
+FREE FORM MICRO: f1 - 0.603, pr - 0.603, re - 0.603
+IMAGE - 169815_038
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.485, pr - 0.406, re - 0.603
+FREE FORM MICRO: f1 - 0.599, pr - 0.599, re - 0.599
+IMAGE - 165736_007
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.483, pr - 0.404, re - 0.603
+FREE FORM MICRO: f1 - 0.594, pr - 0.594, re - 0.594
+IMAGE - 164868_000
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.484, pr - 0.405, re - 0.603
+FREE FORM MICRO: f1 - 0.597, pr - 0.597, re - 0.597
+IMAGE - 181421_16
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.485, pr - 0.407, re - 0.604
+FREE FORM MICRO: f1 - 0.600, pr - 0.600, re - 0.600
+IMAGE - 164428_012
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.487, pr - 0.408, re - 0.604
+FREE FORM MICRO: f1 - 0.603, pr - 0.603, re - 0.603
+IMAGE - 165100_000
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.488, pr - 0.410, re - 0.604
+FREE FORM MICRO: f1 - 0.605, pr - 0.605, re - 0.605
+IMAGE - 165007_009
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.486, pr - 0.408, re - 0.604
+FREE FORM MICRO: f1 - 0.601, pr - 0.601, re - 0.601
+IMAGE - 164655_054
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.488, pr - 0.410, re - 0.606
+FREE FORM MICRO: f1 - 0.604, pr - 0.604, re - 0.604
+IMAGE - 165750_034
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.490, pr - 0.412, re - 0.606
+FREE FORM MICRO: f1 - 0.607, pr - 0.607, re - 0.607
+IMAGE - 164692_031
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.488, pr - 0.410, re - 0.606
+FREE FORM MICRO: f1 - 0.603, pr - 0.603, re - 0.603
+IMAGE - 164752_004
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.489, pr - 0.411, re - 0.606
+FREE FORM MICRO: f1 - 0.605, pr - 0.605, re - 0.605
+IMAGE - 164907_037
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.485, pr - 0.409, re - 0.598
+FREE FORM MICRO: f1 - 0.601, pr - 0.601, re - 0.601
+IMAGE - 165956_054
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.480, pr - 0.407, re - 0.590
+FREE FORM MICRO: f1 - 0.597, pr - 0.597, re - 0.597
+IMAGE - 169803_011
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.483, pr - 0.410, re - 0.591
+FREE FORM MICRO: f1 - 0.600, pr - 0.600, re - 0.600
+IMAGE - 165982_021
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.484, pr - 0.411, re - 0.592
+FREE FORM MICRO: f1 - 0.603, pr - 0.603, re - 0.603
+IMAGE - 181465_24
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.482, pr - 0.410, re - 0.592
+FREE FORM MICRO: f1 - 0.599, pr - 0.599, re - 0.599
+IMAGE - 164516_013
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.483, pr - 0.411, re - 0.592
+FREE FORM MICRO: f1 - 0.601, pr - 0.601, re - 0.601
+IMAGE - 164844_084
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.485, pr - 0.413, re - 0.593
+FREE FORM MICRO: f1 - 0.604, pr - 0.604, re - 0.604
+IMAGE - 164842_046
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.487, pr - 0.416, re - 0.595
+FREE FORM MICRO: f1 - 0.606, pr - 0.606, re - 0.606
+IMAGE - 166199_029
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.486, pr - 0.414, re - 0.595
+FREE FORM MICRO: f1 - 0.602, pr - 0.602, re - 0.602
+IMAGE - 169800_008
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.482, pr - 0.409, re - 0.590
+FREE FORM MICRO: f1 - 0.599, pr - 0.599, re - 0.599
+IMAGE - 169839_073
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.484, pr - 0.412, re - 0.592
+FREE FORM MICRO: f1 - 0.601, pr - 0.601, re - 0.601
+IMAGE - 164420_025
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.485, pr - 0.413, re - 0.592
+FREE FORM MICRO: f1 - 0.604, pr - 0.604, re - 0.604
+IMAGE - 164441_021
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.486, pr - 0.414, re - 0.592
+FREE FORM MICRO: f1 - 0.606, pr - 0.606, re - 0.606
+IMAGE - 164674_151
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.487, pr - 0.415, re - 0.593
+FREE FORM MICRO: f1 - 0.608, pr - 0.608, re - 0.608
+IMAGE - 166209_071
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.488, pr - 0.417, re - 0.593
+FREE FORM MICRO: f1 - 0.611, pr - 0.611, re - 0.611
+IMAGE - 164655_038
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.489, pr - 0.418, re - 0.593
+FREE FORM MICRO: f1 - 0.613, pr - 0.613, re - 0.613
+IMAGE - 165020_041
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.486, pr - 0.413, re - 0.593
+FREE FORM MICRO: f1 - 0.609, pr - 0.609, re - 0.609
+IMAGE - 165933_050
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.487, pr - 0.415, re - 0.593
+FREE FORM MICRO: f1 - 0.612, pr - 0.612, re - 0.612
+IMAGE - 165023_018
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.486, pr - 0.413, re - 0.593
+FREE FORM MICRO: f1 - 0.608, pr - 0.608, re - 0.608
+IMAGE - 165090_033
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.487, pr - 0.414, re - 0.594
+FREE FORM MICRO: f1 - 0.610, pr - 0.610, re - 0.610
+IMAGE - 169832_011
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.488, pr - 0.415, re - 0.594
+FREE FORM MICRO: f1 - 0.613, pr - 0.613, re - 0.613
+IMAGE - 164855_010
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.489, pr - 0.416, re - 0.594
+FREE FORM MICRO: f1 - 0.615, pr - 0.615, re - 0.615
+IMAGE - 166160_48
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.491, pr - 0.418, re - 0.596
+FREE FORM MICRO: f1 - 0.617, pr - 0.617, re - 0.617
+IMAGE - 164693_069
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.488, pr - 0.414, re - 0.596
+FREE FORM MICRO: f1 - 0.614, pr - 0.614, re - 0.614
+IMAGE - 181443_8
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.487, pr - 0.413, re - 0.596
+FREE FORM MICRO: f1 - 0.610, pr - 0.610, re - 0.610
+IMAGE - 164454_044
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.484, pr - 0.409, re - 0.596
+FREE FORM MICRO: f1 - 0.607, pr - 0.607, re - 0.607
+IMAGE - 166450_050
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.486, pr - 0.411, re - 0.597
+FREE FORM MICRO: f1 - 0.609, pr - 0.609, re - 0.609
+IMAGE - 169839_068
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.487, pr - 0.412, re - 0.597
+FREE FORM MICRO: f1 - 0.611, pr - 0.611, re - 0.611
+IMAGE - 164749_002
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.488, pr - 0.413, re - 0.597
+FREE FORM MICRO: f1 - 0.613, pr - 0.613, re - 0.613
+IMAGE - 165664_051
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.489, pr - 0.414, re - 0.598
+FREE FORM MICRO: f1 - 0.615, pr - 0.615, re - 0.615
+IMAGE - 169808_008
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.490, pr - 0.415, re - 0.598
+FREE FORM MICRO: f1 - 0.617, pr - 0.617, re - 0.617
+IMAGE - 164674_189
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.920
+FREE FORM MACRO: f1 - 0.487, pr - 0.411, re - 0.598
+FREE FORM MICRO: f1 - 0.614, pr - 0.614, re - 0.614
+IMAGE - 166512_000
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.920
+FREE FORM MACRO: f1 - 0.488, pr - 0.412, re - 0.598
+FREE FORM MICRO: f1 - 0.616, pr - 0.616, re - 0.616
+IMAGE - 169831_022
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.487, pr - 0.411, re - 0.598
+FREE FORM MICRO: f1 - 0.613, pr - 0.613, re - 0.613
+IMAGE - 165959_109
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.489, pr - 0.413, re - 0.599
+FREE FORM MICRO: f1 - 0.615, pr - 0.615, re - 0.615
+IMAGE - 164842_030
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.920
+FREE FORM MACRO: f1 - 0.490, pr - 0.415, re - 0.600
+FREE FORM MICRO: f1 - 0.617, pr - 0.617, re - 0.617
+IMAGE - 165020_006
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.489, pr - 0.414, re - 0.600
+FREE FORM MICRO: f1 - 0.614, pr - 0.614, re - 0.614
+IMAGE - 165006_049
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.488, pr - 0.412, re - 0.600
+FREE FORM MICRO: f1 - 0.611, pr - 0.611, re - 0.611
+IMAGE - 166170_18
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.489, pr - 0.413, re - 0.601
+FREE FORM MICRO: f1 - 0.613, pr - 0.613, re - 0.613
+IMAGE - 167855_004
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.485, pr - 0.410, re - 0.597
+FREE FORM MICRO: f1 - 0.609, pr - 0.609, re - 0.609
+IMAGE - 164655_041
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.487, pr - 0.412, re - 0.598
+FREE FORM MICRO: f1 - 0.611, pr - 0.611, re - 0.611
+IMAGE - 165088_020
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.488, pr - 0.413, re - 0.598
+FREE FORM MICRO: f1 - 0.613, pr - 0.613, re - 0.613
+IMAGE - 166196_033
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.490, pr - 0.415, re - 0.599
+FREE FORM MICRO: f1 - 0.615, pr - 0.615, re - 0.615
+IMAGE - 166060_013
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.920
+FREE FORM MACRO: f1 - 0.490, pr - 0.416, re - 0.599
+FREE FORM MICRO: f1 - 0.617, pr - 0.617, re - 0.617
+IMAGE - 164835_013
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.920
+FREE FORM MACRO: f1 - 0.491, pr - 0.417, re - 0.600
+FREE FORM MICRO: f1 - 0.619, pr - 0.619, re - 0.619
+IMAGE - 164453_028
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.921
+FREE FORM MACRO: f1 - 0.492, pr - 0.417, re - 0.600
+FREE FORM MICRO: f1 - 0.621, pr - 0.621, re - 0.621
+IMAGE - 169829_142
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.491, pr - 0.416, re - 0.600
+FREE FORM MICRO: f1 - 0.618, pr - 0.618, re - 0.618
+IMAGE - 164451_013
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.920
+FREE FORM MACRO: f1 - 0.492, pr - 0.417, re - 0.600
+FREE FORM MICRO: f1 - 0.620, pr - 0.620, re - 0.620
+IMAGE - 164845_009
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.920
+FREE FORM MACRO: f1 - 0.492, pr - 0.418, re - 0.600
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 164470_011
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.921
+FREE FORM MACRO: f1 - 0.494, pr - 0.420, re - 0.601
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 164839_031
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.921
+FREE FORM MACRO: f1 - 0.495, pr - 0.421, re - 0.602
+FREE FORM MICRO: f1 - 0.626, pr - 0.626, re - 0.626
+IMAGE - 181423_59
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.920
+FREE FORM MACRO: f1 - 0.494, pr - 0.419, re - 0.602
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 164507_013
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.920
+FREE FORM MACRO: f1 - 0.495, pr - 0.421, re - 0.603
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 165088_076
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.921
+FREE FORM MACRO: f1 - 0.497, pr - 0.423, re - 0.603
+FREE FORM MICRO: f1 - 0.626, pr - 0.626, re - 0.626
+IMAGE - 164847_062
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.496, pr - 0.422, re - 0.603
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 165095_007
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.495, pr - 0.420, re - 0.603
+FREE FORM MICRO: f1 - 0.620, pr - 0.620, re - 0.620
+IMAGE - 166450_096
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.493, pr - 0.417, re - 0.603
+FREE FORM MICRO: f1 - 0.617, pr - 0.617, re - 0.617
+IMAGE - 164863_010
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.490, pr - 0.414, re - 0.603
+FREE FORM MICRO: f1 - 0.614, pr - 0.614, re - 0.614
+IMAGE - 166060_134
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.489, pr - 0.412, re - 0.603
+FREE FORM MICRO: f1 - 0.611, pr - 0.611, re - 0.611
+IMAGE - 181423_69
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.488, pr - 0.411, re - 0.603
+FREE FORM MICRO: f1 - 0.608, pr - 0.608, re - 0.608
+IMAGE - 165692_082
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.489, pr - 0.412, re - 0.604
+FREE FORM MICRO: f1 - 0.610, pr - 0.610, re - 0.610
+IMAGE - 164323_035
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.490, pr - 0.413, re - 0.604
+FREE FORM MICRO: f1 - 0.612, pr - 0.612, re - 0.612
+IMAGE - 169829_094
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.491, pr - 0.413, re - 0.604
+FREE FORM MICRO: f1 - 0.614, pr - 0.614, re - 0.614
+IMAGE - 164507_007
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.492, pr - 0.415, re - 0.605
+FREE FORM MICRO: f1 - 0.616, pr - 0.616, re - 0.616
+IMAGE - 164458_069
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.491, pr - 0.414, re - 0.605
+FREE FORM MICRO: f1 - 0.613, pr - 0.613, re - 0.613
+IMAGE - 166180_45
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.490, pr - 0.413, re - 0.605
+FREE FORM MICRO: f1 - 0.610, pr - 0.610, re - 0.610
+IMAGE - 165968_006
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.492, pr - 0.414, re - 0.606
+FREE FORM MICRO: f1 - 0.612, pr - 0.612, re - 0.612
+IMAGE - 169839_000
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.492, pr - 0.415, re - 0.606
+FREE FORM MICRO: f1 - 0.614, pr - 0.614, re - 0.614
+IMAGE - 169811_079
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.493, pr - 0.416, re - 0.606
+FREE FORM MICRO: f1 - 0.615, pr - 0.615, re - 0.615
+IMAGE - 181428_21
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.494, pr - 0.417, re - 0.606
+FREE FORM MICRO: f1 - 0.617, pr - 0.617, re - 0.617
+IMAGE - 164434_001
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.494, pr - 0.418, re - 0.607
+FREE FORM MICRO: f1 - 0.619, pr - 0.619, re - 0.619
+IMAGE - 164756_017
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.493, pr - 0.417, re - 0.607
+FREE FORM MICRO: f1 - 0.616, pr - 0.616, re - 0.616
+IMAGE - 164842_033
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.495, pr - 0.418, re - 0.607
+FREE FORM MICRO: f1 - 0.618, pr - 0.618, re - 0.618
+IMAGE - 165006_081
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.496, pr - 0.420, re - 0.608
+FREE FORM MICRO: f1 - 0.619, pr - 0.619, re - 0.619
+IMAGE - 164847_101
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.497, pr - 0.422, re - 0.609
+FREE FORM MICRO: f1 - 0.621, pr - 0.621, re - 0.621
+IMAGE - 169803_029
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.497, pr - 0.420, re - 0.609
+FREE FORM MICRO: f1 - 0.618, pr - 0.618, re - 0.618
+IMAGE - 164314_068
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.497, pr - 0.421, re - 0.609
+FREE FORM MICRO: f1 - 0.620, pr - 0.620, re - 0.620
+IMAGE - 164735_079
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.498, pr - 0.422, re - 0.609
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 165745_002
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.499, pr - 0.423, re - 0.610
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 164397_037
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.500, pr - 0.424, re - 0.610
+FREE FORM MICRO: f1 - 0.625, pr - 0.625, re - 0.625
+IMAGE - 165804_003
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.501, pr - 0.425, re - 0.610
+FREE FORM MICRO: f1 - 0.627, pr - 0.627, re - 0.627
+IMAGE - 169828_105
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.500, pr - 0.424, re - 0.610
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 164747_017
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.499, pr - 0.423, re - 0.610
+FREE FORM MICRO: f1 - 0.621, pr - 0.621, re - 0.621
+IMAGE - 166450_109
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.498, pr - 0.421, re - 0.610
+FREE FORM MICRO: f1 - 0.619, pr - 0.619, re - 0.619
+IMAGE - 166115_023
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.497, pr - 0.420, re - 0.610
+FREE FORM MICRO: f1 - 0.616, pr - 0.616, re - 0.616
+IMAGE - 164420_021
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.498, pr - 0.422, re - 0.611
+FREE FORM MICRO: f1 - 0.618, pr - 0.618, re - 0.618
+IMAGE - 167855_039
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.499, pr - 0.423, re - 0.612
+FREE FORM MICRO: f1 - 0.619, pr - 0.619, re - 0.619
+IMAGE - 166179_129
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.496, pr - 0.420, re - 0.609
+FREE FORM MICRO: f1 - 0.617, pr - 0.617, re - 0.617
+IMAGE - 164474_030
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.497, pr - 0.421, re - 0.609
+FREE FORM MICRO: f1 - 0.618, pr - 0.618, re - 0.618
+IMAGE - 164750_019
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.498, pr - 0.422, re - 0.609
+FREE FORM MICRO: f1 - 0.620, pr - 0.620, re - 0.620
+IMAGE - 164836_092
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.499, pr - 0.423, re - 0.610
+FREE FORM MICRO: f1 - 0.621, pr - 0.621, re - 0.621
+IMAGE - 166450_070
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.500, pr - 0.425, re - 0.610
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 166334_014
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.501, pr - 0.426, re - 0.611
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 166196_029
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.502, pr - 0.427, re - 0.611
+FREE FORM MICRO: f1 - 0.626, pr - 0.626, re - 0.626
+IMAGE - 169828_012
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.503, pr - 0.428, re - 0.611
+FREE FORM MICRO: f1 - 0.628, pr - 0.628, re - 0.628
+IMAGE - 164668_098
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.503, pr - 0.428, re - 0.612
+FREE FORM MICRO: f1 - 0.629, pr - 0.629, re - 0.629
+IMAGE - 165018_050
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.504, pr - 0.429, re - 0.612
+FREE FORM MICRO: f1 - 0.631, pr - 0.631, re - 0.631
+IMAGE - 166196_012
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.505, pr - 0.431, re - 0.612
+FREE FORM MICRO: f1 - 0.632, pr - 0.632, re - 0.632
+IMAGE - 164327_034
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.506, pr - 0.432, re - 0.613
+FREE FORM MICRO: f1 - 0.633, pr - 0.633, re - 0.633
+IMAGE - 164458_032
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.505, pr - 0.431, re - 0.613
+FREE FORM MICRO: f1 - 0.631, pr - 0.631, re - 0.631
+IMAGE - 165748_014
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.506, pr - 0.431, re - 0.613
+FREE FORM MICRO: f1 - 0.632, pr - 0.632, re - 0.632
+IMAGE - 164464_007
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.506, pr - 0.432, re - 0.613
+FREE FORM MICRO: f1 - 0.634, pr - 0.634, re - 0.634
+IMAGE - 166196_036
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.507, pr - 0.434, re - 0.614
+FREE FORM MICRO: f1 - 0.635, pr - 0.635, re - 0.635
+IMAGE - 164842_025
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.920
+FREE FORM MACRO: f1 - 0.508, pr - 0.434, re - 0.614
+FREE FORM MICRO: f1 - 0.637, pr - 0.637, re - 0.637
+IMAGE - 165692_022
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.614
+FREE FORM MICRO: f1 - 0.634, pr - 0.634, re - 0.634
+IMAGE - 165090_064
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.919
+FREE FORM MACRO: f1 - 0.508, pr - 0.434, re - 0.614
+FREE FORM MICRO: f1 - 0.636, pr - 0.636, re - 0.636
+IMAGE - 166334_204
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.614
+FREE FORM MICRO: f1 - 0.633, pr - 0.633, re - 0.633
+IMAGE - 181471_42
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.506, pr - 0.432, re - 0.614
+FREE FORM MICRO: f1 - 0.631, pr - 0.631, re - 0.631
+IMAGE - 164834_009
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.918
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.615
+FREE FORM MICRO: f1 - 0.632, pr - 0.632, re - 0.632
+IMAGE - 181449_13
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.506, pr - 0.432, re - 0.615
+FREE FORM MICRO: f1 - 0.630, pr - 0.630, re - 0.630
+IMAGE - 169832_081
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.507, pr - 0.432, re - 0.615
+FREE FORM MICRO: f1 - 0.631, pr - 0.631, re - 0.631
+IMAGE - 164326_031
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.508, pr - 0.434, re - 0.615
+FREE FORM MICRO: f1 - 0.633, pr - 0.633, re - 0.633
+IMAGE - 166192_52
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.615
+FREE FORM MICRO: f1 - 0.630, pr - 0.630, re - 0.630
+IMAGE - 166334_144
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.917
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.615
+FREE FORM MICRO: f1 - 0.632, pr - 0.632, re - 0.632
+IMAGE - 169800_062
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.507, pr - 0.432, re - 0.615
+FREE FORM MICRO: f1 - 0.629, pr - 0.629, re - 0.629
+IMAGE - 169839_033
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.506, pr - 0.431, re - 0.615
+FREE FORM MICRO: f1 - 0.627, pr - 0.627, re - 0.627
+IMAGE - 169839_053
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.505, pr - 0.430, re - 0.615
+FREE FORM MICRO: f1 - 0.625, pr - 0.625, re - 0.625
+IMAGE - 164740_025
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.504, pr - 0.429, re - 0.615
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 164704_012
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.505, pr - 0.430, re - 0.616
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 169800_045
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.505, pr - 0.430, re - 0.616
+FREE FORM MICRO: f1 - 0.625, pr - 0.625, re - 0.625
+IMAGE - 166033_003
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.506, pr - 0.431, re - 0.616
+FREE FORM MICRO: f1 - 0.626, pr - 0.626, re - 0.626
+IMAGE - 166197_019
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.507, pr - 0.432, re - 0.616
+FREE FORM MICRO: f1 - 0.628, pr - 0.628, re - 0.628
+IMAGE - 165735_019
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.616
+FREE FORM MICRO: f1 - 0.629, pr - 0.629, re - 0.629
+IMAGE - 165105_006
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.508, pr - 0.433, re - 0.616
+FREE FORM MICRO: f1 - 0.630, pr - 0.630, re - 0.630
+IMAGE - 167855_028
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.509, pr - 0.434, re - 0.617
+FREE FORM MICRO: f1 - 0.632, pr - 0.632, re - 0.632
+IMAGE - 164396_048
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.508, pr - 0.433, re - 0.617
+FREE FORM MICRO: f1 - 0.629, pr - 0.629, re - 0.629
+IMAGE - 166170_67
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.508, pr - 0.434, re - 0.617
+FREE FORM MICRO: f1 - 0.631, pr - 0.631, re - 0.631
+IMAGE - 181423_8
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.506, pr - 0.433, re - 0.612
+FREE FORM MICRO: f1 - 0.629, pr - 0.629, re - 0.629
+IMAGE - 166160_145
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.916
+FREE FORM MACRO: f1 - 0.507, pr - 0.434, re - 0.613
+FREE FORM MICRO: f1 - 0.630, pr - 0.630, re - 0.630
+IMAGE - 164845_037
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.506, pr - 0.433, re - 0.613
+FREE FORM MICRO: f1 - 0.628, pr - 0.628, re - 0.628
+IMAGE - 165749_018
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.507, pr - 0.434, re - 0.613
+FREE FORM MICRO: f1 - 0.629, pr - 0.629, re - 0.629
+IMAGE - 164674_220
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.506, pr - 0.433, re - 0.613
+FREE FORM MICRO: f1 - 0.627, pr - 0.627, re - 0.627
+IMAGE - 166290_002
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.507, pr - 0.434, re - 0.613
+FREE FORM MICRO: f1 - 0.628, pr - 0.628, re - 0.628
+IMAGE - 166003_054
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.506, pr - 0.433, re - 0.613
+FREE FORM MICRO: f1 - 0.626, pr - 0.626, re - 0.626
+IMAGE - 164668_086
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.503, pr - 0.430, re - 0.611
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 166196_055
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.504, pr - 0.431, re - 0.611
+FREE FORM MICRO: f1 - 0.625, pr - 0.625, re - 0.625
+IMAGE - 165006_084
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.505, pr - 0.432, re - 0.612
+FREE FORM MICRO: f1 - 0.626, pr - 0.626, re - 0.626
+IMAGE - 165088_052
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.915
+FREE FORM MACRO: f1 - 0.506, pr - 0.433, re - 0.612
+FREE FORM MICRO: f1 - 0.628, pr - 0.628, re - 0.628
+IMAGE - 164674_128
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.505, pr - 0.432, re - 0.612
+FREE FORM MICRO: f1 - 0.625, pr - 0.625, re - 0.625
+IMAGE - 164747_029
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.504, pr - 0.431, re - 0.612
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 164848_063
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.505, pr - 0.432, re - 0.612
+FREE FORM MICRO: f1 - 0.625, pr - 0.625, re - 0.625
+IMAGE - 167841_036
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.506, pr - 0.433, re - 0.613
+FREE FORM MICRO: f1 - 0.626, pr - 0.626, re - 0.626
+IMAGE - 164836_025
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.505, pr - 0.432, re - 0.613
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 165109_026
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.504, pr - 0.431, re - 0.613
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 169802_077
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.504, pr - 0.430, re - 0.613
+FREE FORM MICRO: f1 - 0.620, pr - 0.620, re - 0.620
+IMAGE - 166060_094
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.504, pr - 0.431, re - 0.613
+FREE FORM MICRO: f1 - 0.621, pr - 0.621, re - 0.621
+IMAGE - 165692_044
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.505, pr - 0.432, re - 0.614
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 166003_071
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.504, pr - 0.429, re - 0.614
+FREE FORM MICRO: f1 - 0.620, pr - 0.620, re - 0.620
+IMAGE - 165959_066
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.503, pr - 0.428, re - 0.614
+FREE FORM MICRO: f1 - 0.618, pr - 0.618, re - 0.618
+IMAGE - 169814_012
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.502, pr - 0.428, re - 0.614
+FREE FORM MICRO: f1 - 0.616, pr - 0.616, re - 0.616
+IMAGE - 165767_001
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.503, pr - 0.428, re - 0.614
+FREE FORM MICRO: f1 - 0.617, pr - 0.617, re - 0.617
+IMAGE - 164390_000
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.503, pr - 0.429, re - 0.614
+FREE FORM MICRO: f1 - 0.618, pr - 0.618, re - 0.618
+IMAGE - 181423_42
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.503, pr - 0.428, re - 0.614
+FREE FORM MICRO: f1 - 0.616, pr - 0.616, re - 0.616
+IMAGE - 169802_024
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.503, pr - 0.429, re - 0.614
+FREE FORM MICRO: f1 - 0.618, pr - 0.618, re - 0.618
+IMAGE - 165009_068
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.503, pr - 0.428, re - 0.614
+FREE FORM MICRO: f1 - 0.616, pr - 0.616, re - 0.616
+IMAGE - 165006_083
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.504, pr - 0.429, re - 0.615
+FREE FORM MICRO: f1 - 0.617, pr - 0.617, re - 0.617
+IMAGE - 164836_021
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.503, pr - 0.428, re - 0.615
+FREE FORM MICRO: f1 - 0.615, pr - 0.615, re - 0.615
+IMAGE - 164412_014
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.503, pr - 0.429, re - 0.615
+FREE FORM MICRO: f1 - 0.616, pr - 0.616, re - 0.616
+IMAGE - 166160_31
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.504, pr - 0.430, re - 0.615
+FREE FORM MICRO: f1 - 0.617, pr - 0.617, re - 0.617
+IMAGE - 164323_018
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.505, pr - 0.431, re - 0.616
+FREE FORM MICRO: f1 - 0.619, pr - 0.619, re - 0.619
+IMAGE - 166163_7
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.504, pr - 0.430, re - 0.616
+FREE FORM MICRO: f1 - 0.617, pr - 0.617, re - 0.617
+IMAGE - 164845_022
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.505, pr - 0.431, re - 0.616
+FREE FORM MICRO: f1 - 0.618, pr - 0.618, re - 0.618
+IMAGE - 164752_007
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.505, pr - 0.431, re - 0.616
+FREE FORM MICRO: f1 - 0.619, pr - 0.619, re - 0.619
+IMAGE - 166105_003
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.506, pr - 0.432, re - 0.616
+FREE FORM MICRO: f1 - 0.620, pr - 0.620, re - 0.620
+IMAGE - 164668_022
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.506, pr - 0.433, re - 0.616
+FREE FORM MICRO: f1 - 0.621, pr - 0.621, re - 0.621
+IMAGE - 164846_025
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.617
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 164847_104
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.508, pr - 0.434, re - 0.617
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 166450_088
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.617
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 165097_011
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.507, pr - 0.434, re - 0.617
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 164480_008
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.508, pr - 0.434, re - 0.617
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 166060_027
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.617
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 167855_010
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.508, pr - 0.434, re - 0.617
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 166127_013
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.506, pr - 0.432, re - 0.617
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 164326_028
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.618
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 166177_36
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.508, pr - 0.434, re - 0.618
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 164317_086
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.506, pr - 0.431, re - 0.618
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 166166_27
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.506, pr - 0.431, re - 0.618
+FREE FORM MICRO: f1 - 0.620, pr - 0.620, re - 0.620
+IMAGE - 166160_40
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.507, pr - 0.432, re - 0.618
+FREE FORM MICRO: f1 - 0.621, pr - 0.621, re - 0.621
+IMAGE - 169805_114
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.507, pr - 0.432, re - 0.619
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 165959_137
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.508, pr - 0.433, re - 0.619
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 166020_055
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.508, pr - 0.434, re - 0.619
+FREE FORM MICRO: f1 - 0.625, pr - 0.625, re - 0.625
+IMAGE - 164888_041
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.507, pr - 0.431, re - 0.619
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 167855_025
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.508, pr - 0.432, re - 0.619
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 165010_023
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.507, pr - 0.431, re - 0.619
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 165006_074
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.508, pr - 0.432, re - 0.620
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 166111_055
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.508, pr - 0.433, re - 0.620
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 166450_069
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.509, pr - 0.434, re - 0.620
+FREE FORM MICRO: f1 - 0.625, pr - 0.625, re - 0.625
+IMAGE - 165090_095
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.508, pr - 0.433, re - 0.620
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 165092_035
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.507, pr - 0.432, re - 0.620
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 169800_022
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.508, pr - 0.433, re - 0.621
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 169832_046
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.506, pr - 0.432, re - 0.617
+FREE FORM MICRO: f1 - 0.621, pr - 0.621, re - 0.621
+IMAGE - 164845_090
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.617
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 181485_31
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.617
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 169829_021
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.508, pr - 0.434, re - 0.618
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 164845_020
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.508, pr - 0.435, re - 0.618
+FREE FORM MICRO: f1 - 0.625, pr - 0.625, re - 0.625
+IMAGE - 164756_037
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.508, pr - 0.434, re - 0.618
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 166175_8
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.508, pr - 0.435, re - 0.618
+FREE FORM MICRO: f1 - 0.625, pr - 0.625, re - 0.625
+IMAGE - 164756_032
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.508, pr - 0.434, re - 0.618
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 165753_013
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.508, pr - 0.435, re - 0.618
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 166152_051
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.509, pr - 0.436, re - 0.619
+FREE FORM MICRO: f1 - 0.625, pr - 0.625, re - 0.625
+IMAGE - 169802_075
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.508, pr - 0.435, re - 0.619
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 164747_000
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.509, pr - 0.436, re - 0.619
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 165026_057
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.508, pr - 0.433, re - 0.619
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 165982_029
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.508, pr - 0.434, re - 0.619
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 166060_079
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.619
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 164314_053
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.505, pr - 0.431, re - 0.617
+FREE FORM MICRO: f1 - 0.620, pr - 0.620, re - 0.620
+IMAGE - 165681_061
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.504, pr - 0.429, re - 0.617
+FREE FORM MICRO: f1 - 0.618, pr - 0.618, re - 0.618
+IMAGE - 164655_057
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.505, pr - 0.430, re - 0.617
+FREE FORM MICRO: f1 - 0.619, pr - 0.619, re - 0.619
+IMAGE - 164838_027
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.505, pr - 0.430, re - 0.617
+FREE FORM MICRO: f1 - 0.620, pr - 0.620, re - 0.620
+IMAGE - 166179_119
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.506, pr - 0.431, re - 0.617
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 166164_16
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.506, pr - 0.432, re - 0.618
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 167844_006
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.507, pr - 0.432, re - 0.618
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 181475_33
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.618
+FREE FORM MICRO: f1 - 0.625, pr - 0.625, re - 0.625
+IMAGE - 164397_019
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.507, pr - 0.432, re - 0.618
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 164723_002
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.618
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 181417_6
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.508, pr - 0.434, re - 0.619
+FREE FORM MICRO: f1 - 0.625, pr - 0.625, re - 0.625
+IMAGE - 165757_007
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.508, pr - 0.434, re - 0.619
+FREE FORM MICRO: f1 - 0.626, pr - 0.626, re - 0.626
+IMAGE - 165097_015
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.509, pr - 0.435, re - 0.619
+FREE FORM MICRO: f1 - 0.627, pr - 0.627, re - 0.627
+IMAGE - 164470_007
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.914
+FREE FORM MACRO: f1 - 0.510, pr - 0.436, re - 0.619
+FREE FORM MICRO: f1 - 0.628, pr - 0.628, re - 0.628
+IMAGE - 165956_083
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.509, pr - 0.435, re - 0.619
+FREE FORM MICRO: f1 - 0.626, pr - 0.626, re - 0.626
+IMAGE - 164503_023
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.507, pr - 0.434, re - 0.616
+FREE FORM MICRO: f1 - 0.625, pr - 0.625, re - 0.625
+IMAGE - 164468_046
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.506, pr - 0.433, re - 0.616
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 181453_35
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.507, pr - 0.434, re - 0.616
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 165088_062
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.506, pr - 0.433, re - 0.616
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 166159_42
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.507, pr - 0.434, re - 0.617
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 164326_030
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.913
+FREE FORM MACRO: f1 - 0.508, pr - 0.435, re - 0.617
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 164747_050
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.508, pr - 0.435, re - 0.617
+FREE FORM MICRO: f1 - 0.625, pr - 0.625, re - 0.625
+IMAGE - 164468_033
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.507, pr - 0.434, re - 0.617
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 164845_061
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.507, pr - 0.434, re - 0.617
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 165014_035
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.507, pr - 0.434, re - 0.617
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 167841_082
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.617
+FREE FORM MICRO: f1 - 0.621, pr - 0.621, re - 0.621
+IMAGE - 164468_003
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.507, pr - 0.434, re - 0.617
+FREE FORM MICRO: f1 - 0.622, pr - 0.622, re - 0.622
+IMAGE - 181480_3
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.508, pr - 0.435, re - 0.617
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 164747_039
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking down at the paper
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.508, pr - 0.435, re - 0.617
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 164711_077
+LABEL - ['1', 'paper', 'Person is looking down at the paper']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.507, pr - 0.433, re - 0.617
+FREE FORM MICRO: f1 - 0.623, pr - 0.623, re - 0.623
+IMAGE - 165692_015
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.507, pr - 0.434, re - 0.618
+FREE FORM MICRO: f1 - 0.624, pr - 0.624, re - 0.624
+IMAGE - 164327_033
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.910
+FREE FORM MACRO: f1 - 0.508, pr - 0.435, re - 0.618
+FREE FORM MICRO: f1 - 0.625, pr - 0.625, re - 0.625
+IMAGE - 167846_014
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.509, pr - 0.435, re - 0.618
+FREE FORM MICRO: f1 - 0.626, pr - 0.626, re - 0.626
+IMAGE - 164836_106
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.509, pr - 0.436, re - 0.618
+FREE FORM MICRO: f1 - 0.627, pr - 0.627, re - 0.627
+IMAGE - 165009_104
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.510, pr - 0.436, re - 0.619
+FREE FORM MICRO: f1 - 0.628, pr - 0.628, re - 0.628
+IMAGE - 169842_004
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.911
+FREE FORM MACRO: f1 - 0.510, pr - 0.437, re - 0.619
+FREE FORM MICRO: f1 - 0.628, pr - 0.628, re - 0.628
+IMAGE - 164907_047
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.510, pr - 0.437, re - 0.619
+FREE FORM MICRO: f1 - 0.629, pr - 0.629, re - 0.629
+IMAGE - 181448_3
+LABEL - ['0', 'screen', 'Person is looking straight at the screen']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking straight at the screen
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.511, pr - 0.438, re - 0.619
+FREE FORM MICRO: f1 - 0.630, pr - 0.630, re - 0.630
+IMAGE - 164842_036
+LABEL - ['2', 'away', 'Person is looking away']
+MESSAGE - Received.
+PROMPT - ['Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>', '</Img> ']
+ANSWER - Person is looking away
+METEOR SCORE - 0.912
+FREE FORM MACRO: f1 - 0.511, pr - 0.439, re - 0.619
+FREE FORM MICRO: f1 - 0.631, pr - 0.631, re - 0.631

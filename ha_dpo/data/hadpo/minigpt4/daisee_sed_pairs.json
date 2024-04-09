@@ -1,0 +1,42 @@
+[
+    {
+        "image_id": "2100601067_frame_0007",
+        "chosen": "Person is looking straight at the screen",
+        "rejected": [
+            "",
+            "Person is looking down at the paper",
+            "Person is looking away"
+        ],
+        "question": "Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?"
+    },
+    {
+        "image_id": "2100591003_frame_0004",
+        "chosen": "Person is looking straight at the screen",
+        "rejected": [
+            "",
+            "Person is looking down at the paper",
+            "Person is looking away"
+        ],
+        "question": "Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?"
+    },
+    {
+        "image_id": "3100751007_frame_0001",
+        "chosen": "Person is looking straight at the screen",
+        "rejected": [
+            "",
+            "Person is looking down at the paper",
+            "Person is looking away"
+        ],
+        "question": "Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?"
+    },
+    {
+        "image_id": "3100752032_frame_0001",
+        "chosen": "Person is looking straight at the screen",
+        "rejected": [
+            "",
+            "Person is looking down at the paper",
+            "Person is looking away"
+        ],
+        "question": "Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?"
+    }
+]

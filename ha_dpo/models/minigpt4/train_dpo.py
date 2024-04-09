@@ -243,7 +243,7 @@ if __name__ == "__main__":
     --cfg_path ha_dpo/models/minigpt4/train_configs/minigpt4_llama2_stage3_dpo.yaml \
     --pope_train_data_path /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/baseline_pairs.json  \
     --desc_train_data_path /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/baseline_pairs.json  \
-    --vg_path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing  \
+    --vg_path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_training  \
     --auxilary True \
     --ccsbualign_data_path ha_dpo/data/lubal_sed_training \
     --lora_r 64 \

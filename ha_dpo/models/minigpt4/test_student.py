@@ -96,9 +96,9 @@ def evaluate_caption(
     captions:list, 
     responses:list,
     metric:evaluate.load,
+    scores:torch.Tensor,
     thres:int=0.5
 )->list:
-    scores = torch.zeros(len(captions))
     for i,cap in enumerate(captions):
         # Calculate METEOR score for each model response compared to captions
         score = metric.compute(
@@ -107,9 +107,8 @@ def evaluate_caption(
         )
         scores[i] = score['meteor']
     # Sort scores based on highest METEOR score
-    print("METEOR SCORES",scores)
     pred = (scores > thres).int()
-    return torch.argmax(pred),scores[pred] if scores.sum() > 0 else -1,0
+    return torch.argmax(pred) if scores.sum() > 0 else -1
 
 def main(
     num_classes:int=3,
@@ -139,7 +138,8 @@ def main(
     re_macro = torchmetrics.Recall(task="multiclass", average='macro', num_classes=num_classes).to(chat.model.device)
     
     meteor = evaluate.load('meteor')
-        
+    scores = torch.zeros(len(captions))
+    
     inference_samples = len(os.listdir(args.test_dir))
     pred_table,target_table = torch.zeros(inference_samples).to(chat.model.device),torch.zeros(inference_samples).to(chat.model.device)
     meteor_scores = torch.zeros(inference_samples)
@@ -163,9 +163,9 @@ def main(
         a = chat.answer(queries,repetition_penalty=1.0)[0] # 1.0 is no penalty
         print(f"ANSWER - {a}") 
         
-        pred,m_score = evaluate_caption(captions,a,meteor)
+        pred = evaluate_caption(captions,a,meteor,scores)
         pred_table[sample] = pred
-        if pred < 0:
+        if pred_table[sample] !=  target_table[sample]:
             pred_table[sample] = (target_table[sample] - 1) % num_classes
             a_set.append({
                 'image_id':image_id, 
@@ -174,8 +174,8 @@ def main(
                 'question':queries
             })
             
-        meteor_scores[sample] = m_score
-        print("METEOR SCORE - {:.3f}".format(meteor_scores[:sample+1].sum()/sample+1))
+        meteor_scores[sample] = scores[pred]
+        print("METEOR SCORE - {:.3f}".format(meteor_scores[:sample+1].sum()/(sample+1)))
         
         pred, target = pred_table[:sample+1],target_table[:sample+1]
         f1_a,pr_a,rec_a = f1_macro(pred,target), pr_macro(pred,target),re_macro(pred,target)

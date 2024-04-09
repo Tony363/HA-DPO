@@ -4,9 +4,9 @@ model:
   max_txt_len: 160
   end_sym: "###" #"</s>"
   prompt_template: '###Human: {} ###Assistant: ' #'[INST] {} [/INST] '
-  # ckpt: /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/prerained_minigpt4_7b.pth
+  ckpt: /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/prerained_minigpt4_7b.pth
   # ckpt: /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/minigpt4_eval_general.pth
-  ckpt: /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/minigpt4_eval_student.pth
+  # ckpt: /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/minigpt4_eval_student.pth
   # ckpt: /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/sed_minigpt4_hadpo/hadpo_minigpt4_sed.pth
   # ckpt: '/home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hadpo/hadpo_minigpt4_sed.pth'
 
