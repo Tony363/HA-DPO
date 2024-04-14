@@ -64,13 +64,13 @@ class PopeDataset(Dataset):
         print('Load POPE Data...')
         for anno in tqdm.tqdm(self.data):
             image_id = anno["image_id"]
-            image_path = self.id2path[image_id]
+            image_path = self.id2path[image_id if 'sed' in self.vg_path else int(image_id)]
             self.data_list.append({
                 "image_id": image_id,
                 "image_path": image_path,
                 "image": self.vis_processor(Image.open(image_path).convert("RGB")),
                 "chosen": anno["chosen"],
-                "rejected": anno["rejected"],
+                "rejected": anno["reject"],
                 "data_type": "pope",
                 "prompt": anno["question"],
             })
@@ -177,7 +177,7 @@ class AugmentedCaptionDataset(Dataset):
     def load_data(self, index):
         anno = self.data[index]
         image_id = anno["image_id"]
-        image_path = self.id2path[image_id]
+        image_path = self.id2path[image_id if 'sed' in self.vg_path else int(image_id)]
         if self.sample_strategy == "online":
             chosen = random.choice(anno["chosen"])
             rejected = random.choice(anno["rejected"])

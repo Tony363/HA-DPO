@@ -121,7 +121,13 @@ def aug_res(
     # Initialize augmenter
     augmenter = naw.SynonymAug(aug_src='wordnet')
     # Augment data
-    return [augmenter.augment(res) for _ in range(n_aug)]
+    augs = []
+    for _ in range(n_aug):
+        aug = augmenter.augment(res)
+        if not aug:
+            aug = ' '
+        augs.extend(aug)
+    return augs
 
 
 def main(
@@ -192,7 +198,7 @@ def main(
             pope_data.append({
                 'image_id':image_id, 
                 'chosen': label[image_id][-1],
-                'rejected':a,
+                'reject':a,
                 'answer':label[image_id][1],
                 'question':queries
             })
