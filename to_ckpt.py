@@ -3,8 +3,8 @@ import os
 from safetensors.torch import load_file
 
 def main()->None:
-    # directory = '/home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hadpo'
-    directory = '/home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/sed_minigpt4_hadpo'
+    directory = '/home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hadpo'
+    # directory = '/home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/sed_minigpt4_hadpo'
     weights = {
         'model':{}
     }

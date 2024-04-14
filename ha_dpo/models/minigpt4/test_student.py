@@ -10,10 +10,12 @@ import evaluate
 import numpy as np
 import pandas as pd
 import torch.backends.cudnn as cudnn
+import nlpaug.augmenter.word as naw
 
 from rich.logging import RichHandler
 from typing import Tuple
 from textcls_tune import text_classifier,predict
+from datasets import Dataset
 
 from minigpt4.common.config import Config
 from minigpt4.conversation.conversation import ChatInference
@@ -112,9 +114,20 @@ def evaluate_caption(
     return torch.argmax(pred) if scores.sum() > 0 else -1
 
 
+def aug_res(
+    res:str,
+    n_aug:int=10,
+)->list:
+    # Initialize augmenter
+    augmenter = naw.SynonymAug(aug_src='wordnet')
+    # Augment data
+    return [augmenter.augment(res) for _ in range(n_aug)]
+
+
 def main(
     num_classes:int=3,
-    a_set:list=[],
+    desc_data:list=[],
+    pope_data:list=[],
 )->None:
     # init_logger()
     args = parse_args()
@@ -171,10 +184,16 @@ def main(
         pred_table[sample] = pred
         if pred_table[sample] !=  target_table[sample]:
             pred_table[sample] = (target_table[sample] - 1) % num_classes
-            a_set.append({
+            desc_data.append({
+                'image_id':image_id, 
+                'chosen': aug_res(res=label[image_id][-1],n_aug=5),
+                'rejected':aug_res(res=a,n_aug=5),
+            })
+            pope_data.append({
                 'image_id':image_id, 
                 'chosen': label[image_id][-1],
-                'rejected':[a] + [cap for cap in captions if cap != label[image_id][-1]],
+                'rejected':a,
+                'answer':label[image_id][1],
                 'question':queries
             })
             
@@ -193,8 +212,11 @@ def main(
         eval_df.iloc[sample,3] = pred_table[sample].item()
         eval_df.iloc[sample,4] = target_table[sample].item()
     
-    with open(args.dpo_pairs,'w') as f:
-        json.dump(a_set,f,indent=4)
+    with open(args.desc_data,'w') as f:
+        json.dump(desc_data,f,indent=4)
+    
+    with open(args.pope_data,'w') as f:
+        json.dump(pope_data,f,indent=4)
     
     out_file = args.test_dir.split('/')[-2]
     eval_df.columns = ['image_id','question','answer','pred','label']
@@ -242,10 +264,16 @@ def parse_args():
         help="path to filter_cap.json"
     )
     parser.add_argument(
-        "--dpo-pairs", 
+        "--desc-data", 
         type=str, 
-        default='../../data/hadpo/minigpt4/baseline_pairs.json', 
-        help="outfile location for dpo pairs"
+        default='/home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/sed_desc_data.json', 
+        help="outfile location for desc data"
+    )
+    parser.add_argument(
+        "--pope-data", 
+        type=str, 
+        default='/home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/sed_pope_data.json', 
+        help="outfile location for pope data"
     )
     parser.add_argument(
         '-labels','--labels', 
@@ -277,9 +305,16 @@ if __name__ == "__main__":
         --gpu-id 0 \
         --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_training/image \
         --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_training/filter_cap.json\
-        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/training_bal_baseline_pairs.json > /home/tony/HA-DPO/logs/minigpt4_train_sed_base.txt
+        --desc-data /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/sed_desc_data.json \
+        --pope-data /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/sed_pope_data.json > /home/tony/HA-DPO/logs/minigpt4_train_sed_base.txt
         
-        
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id 0 \
+        --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
+        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_hadpo.txt
+       
+       
         
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
@@ -370,6 +405,8 @@ if __name__ == "__main__":
         --test-dir /home/tony/luraw_sed_testing/image \
         --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json\
         --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_raw_sed_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_raw_sed.txt
+    
+    
     
     """
     main() 

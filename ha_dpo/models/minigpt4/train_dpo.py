@@ -45,7 +45,11 @@ class ScriptArguments:
     gamma: Optional[float] = field(default=1.0, metadata={"help": "weight factor of auxilary language modeling task."})
     beta: Optional[float] = field(default=0.1, metadata={"help": "the beta parameter for DPO loss"})
     auxilary: Optional[bool] = field(default=False, metadata={"help": "whether to use auxilary task during DPO."})
-    
+    reference_free: Optional[str] = field(default='sigmoid', metadata={"help": "If True, we ignore the _provided_ reference model and implicitly use a reference model that assigns equal probability to all responses."})
+    loss_type: Optional[str] = field(default='sigmoid', metadata={"help": "the loss type for DPO."})
+    label_smoothing: Optional[float] = field(default=0, metadata={"help": "[cDPO](https://ericmitchell.ai/cdpo.pdf) report that should be between 0 and 0.5"})
+
+
     # training parameters
     model_name_or_path: Optional[str] = field(
         default="../sft/results/final_checkpoint",
@@ -177,14 +181,13 @@ def main():
         seed = script_args.seed,
         auxilary_dataset = auxilary_dataset,
     )
-    train_dataset = desc_train_dataset
-    # pope_train_dataset = PopeDataset(
-    #     data_path = script_args.pope_train_data_path,
-    #     vg_path = script_args.vg_path,
-    #     cfg = cfg.config,
-    #     auxilary_dataset = auxilary_dataset,
-    # )
-    # train_dataset = ConcatDataset([desc_train_dataset, pope_train_dataset])
+    pope_train_dataset = PopeDataset(
+        data_path = script_args.pope_train_data_path,
+        vg_path = script_args.vg_path,
+        cfg = cfg.config,
+        auxilary_dataset = auxilary_dataset,
+    )
+    train_dataset = ConcatDataset([desc_train_dataset, pope_train_dataset])
     
     # if not use gradient_checkpointing, do not set ddp_find_unused_parameters
     if not script_args.gradient_checkpointing:
@@ -227,6 +230,7 @@ def main():
         tokenizer=tokenizer,
         max_prompt_length=script_args.max_prompt_length,
         max_length=script_args.max_length,
+        loss_typ=script_args.loss_type,
     )
     
     # model save callback
@@ -242,7 +246,7 @@ if __name__ == "__main__":
     """
     WANDB_MODE=dryrun accelerate launch --main_process_port $RANDOM ha_dpo/models/minigpt4/train_dpo.py \
     --cfg_path ha_dpo/models/minigpt4/train_configs/minigpt4_llama2_stage3_dpo.yaml \
-    --pope_train_data_path /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/training_bal_baseline_pairs.json  \
+    --pope_train_data_path /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/pope_data.json  \
     --desc_train_data_path /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/training_bal_baseline_pairs.json  \
     --vg_path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_training  \
     --auxilary True \
@@ -253,6 +257,9 @@ if __name__ == "__main__":
     --learning_rate 1e-4 \
     --beta 0.1 \
     --gamma 0.5 \
+    --reference_free False\
+    --loss_type kto_pair \
+    --label_smoothing 0 \
     --gradient_accumulation_steps 1 \
     --max_steps 1000 \
     --output_dir ha_dpo/models/minigpt4/minigpt4/output/sed_minigpt4_hadpo \
