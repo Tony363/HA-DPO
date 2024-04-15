@@ -1,4 +1,9 @@
+*.json
+*.png
+*.jpg
 *.pth
+*.csv
+*.txt
 *.safetensors
 wandb/*
 ha_dpo/data/VG/*
