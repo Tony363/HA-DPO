@@ -13,6 +13,7 @@ import torch.backends.cudnn as cudnn
 
 from rich.logging import RichHandler
 from typing import Tuple
+from textcls_tune import text_classifier,predict
 
 from minigpt4.common.config import Config
 from minigpt4.conversation.conversation import ChatInference
@@ -110,6 +111,7 @@ def evaluate_caption(
     pred = (scores > thres).int()
     return torch.argmax(pred) if scores.sum() > 0 else -1
 
+
 def main(
     num_classes:int=3,
     a_set:list=[],
@@ -121,6 +123,7 @@ def main(
     label = get_test_labels(
         label_path=args.label_path
     )
+    tokenizer, classifier = text_classifier(model_name="/home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/distillbert")
 
     captions = [
         'Person is looking straight at the screen',
@@ -137,12 +140,12 @@ def main(
     pr_macro = torchmetrics.Precision(task="multiclass", average='macro', num_classes=num_classes).to(chat.model.device)
     re_macro = torchmetrics.Recall(task="multiclass", average='macro', num_classes=num_classes).to(chat.model.device)
     
-    meteor = evaluate.load('meteor')
-    scores = torch.zeros(len(captions))
+    # meteor = evaluate.load('meteor')
+    # scores = torch.zeros(len(captions))
     
     inference_samples = len(os.listdir(args.test_dir))
     pred_table,target_table = torch.zeros(inference_samples).to(chat.model.device),torch.zeros(inference_samples).to(chat.model.device)
-    meteor_scores = torch.zeros(inference_samples)
+    # meteor_scores = torch.zeros(inference_samples)
     eval_df = pd.DataFrame(
         np.zeros((inference_samples,5),dtype=object),
     ) 
@@ -163,7 +166,8 @@ def main(
         a = chat.answer(queries,repetition_penalty=1.0)[0] # 1.0 is no penalty
         print(f"ANSWER - {a}") 
         
-        pred = evaluate_caption(captions,a,meteor,scores)
+        # pred = evaluate_caption(captions,a,meteor,scores)
+        pred = predict(a,tokenizer,classifier)
         pred_table[sample] = pred
         if pred_table[sample] !=  target_table[sample]:
             pred_table[sample] = (target_table[sample] - 1) % num_classes
@@ -174,8 +178,8 @@ def main(
                 'question':queries
             })
             
-        meteor_scores[sample] = scores[pred]
-        print("METEOR SCORE - {:.3f}".format(meteor_scores[:sample+1].sum()/(sample+1)))
+        # meteor_scores[sample] = scores[pred]
+        # print("METEOR SCORE - {:.3f}".format(meteor_scores[:sample+1].sum()/(sample+1)))
         
         pred, target = pred_table[:sample+1],target_table[:sample+1]
         f1_a,pr_a,rec_a = f1_macro(pred,target), pr_macro(pred,target),re_macro(pred,target)

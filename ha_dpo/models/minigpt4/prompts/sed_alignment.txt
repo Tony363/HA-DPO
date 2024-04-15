@@ -1,4 +1,0 @@
-<Img><ImageHere></Img>Is the person looking straight at the screen? 
-<Img><ImageHere></Img>Is the person looking down at the paper? 
-<Img><ImageHere></Img>Is the person looking away?
-<Img><ImageHere></Img>Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?

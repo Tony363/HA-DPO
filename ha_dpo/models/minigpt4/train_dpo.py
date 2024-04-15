@@ -177,13 +177,14 @@ def main():
         seed = script_args.seed,
         auxilary_dataset = auxilary_dataset,
     )
-    pope_train_dataset = PopeDataset(
-        data_path = script_args.pope_train_data_path,
-        vg_path = script_args.vg_path,
-        cfg = cfg.config,
-        auxilary_dataset = auxilary_dataset,
-    )
-    train_dataset = ConcatDataset([desc_train_dataset, pope_train_dataset])
+    train_dataset = desc_train_dataset
+    # pope_train_dataset = PopeDataset(
+    #     data_path = script_args.pope_train_data_path,
+    #     vg_path = script_args.vg_path,
+    #     cfg = cfg.config,
+    #     auxilary_dataset = auxilary_dataset,
+    # )
+    # train_dataset = ConcatDataset([desc_train_dataset, pope_train_dataset])
     
     # if not use gradient_checkpointing, do not set ddp_find_unused_parameters
     if not script_args.gradient_checkpointing:
@@ -241,8 +242,8 @@ if __name__ == "__main__":
     """
     WANDB_MODE=dryrun accelerate launch --main_process_port $RANDOM ha_dpo/models/minigpt4/train_dpo.py \
     --cfg_path ha_dpo/models/minigpt4/train_configs/minigpt4_llama2_stage3_dpo.yaml \
-    --pope_train_data_path /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/baseline_pairs.json  \
-    --desc_train_data_path /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/baseline_pairs.json  \
+    --pope_train_data_path /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/training_bal_baseline_pairs.json  \
+    --desc_train_data_path /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/training_bal_baseline_pairs.json  \
     --vg_path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_training  \
     --auxilary True \
     --ccsbualign_data_path ha_dpo/data/lubal_sed_training \
