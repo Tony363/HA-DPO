@@ -1,4 +1,6 @@
 import os
+import io
+import requests
 import tqdm
 import json
 import random
@@ -19,11 +21,13 @@ class PopeDataset(Dataset):
         vg_path: str,
         cfg: OmegaConf,
         auxilary_dataset = None,
+        stream:bool=False,
     ):
         super(PopeDataset, self).__init__()
         self.data_path = data_path
         self.vg_path = vg_path
         self.cfg = cfg
+        self.stream = stream
         self.auxilary_dataset = auxilary_dataset
         
         # pos&neg data
@@ -36,7 +40,7 @@ class PopeDataset(Dataset):
         self.vg_image_data = json.load(open(os.path.join(self.vg_path, "image_data.json")))
         self.id2path = {
             _data["image_id"]: os.path.join(self.vg_path,'image',_data['image_id']+'.jpg')\
-                if 'sed' in self.vg_path else\
+                if 'sed' in self.vg_path else _data['url'] if stream else\
                     os.path.join(self.vg_path, _data["url"].split("/")[-2], _data["url"].split("/")[-1]) 
             for _data in self.vg_image_data
         }
@@ -65,6 +69,8 @@ class PopeDataset(Dataset):
         for anno in tqdm.tqdm(self.data):
             image_id = anno["image_id"]
             image_path = self.id2path[image_id if 'sed' in self.vg_path else int(image_id)]
+            if self.stream:
+                image_path = io.BytesIO(requests.get(image_path).content)
             self.data_list.append({
                 "image_id": image_id,
                 "image_path": image_path,
@@ -118,7 +124,8 @@ class AugmentedCaptionDataset(Dataset):
         cfg: OmegaConf,
         seed: int,
         sample_strategy = "offline",
-        auxilary_dataset = None,         
+        auxilary_dataset = None,
+        stream:bool=False,         
     ):
         super(AugmentedCaptionDataset, self).__init__()
         
@@ -127,6 +134,7 @@ class AugmentedCaptionDataset(Dataset):
         self.vg_path = vg_path
         self.cfg = cfg
         self.auxilary_dataset = auxilary_dataset
+        self.stream = stream
         
         # pos&neg data
         vis_cfg = self.cfg.datasets.cc_sbu_align.vis_processor.train
@@ -152,7 +160,7 @@ class AugmentedCaptionDataset(Dataset):
         self.vg_image_data = json.load(open(os.path.join(self.vg_path, "image_data.json")))
         self.id2path = {
             _data["image_id"]: os.path.join(self.vg_path,'image',_data['image_id']+'.jpg')\
-                if 'sed' in self.vg_path else\
+                if 'sed' in self.vg_path else _data['url'] if stream else\
                     os.path.join(self.vg_path, _data["url"].split("/")[-2], _data["url"].split("/")[-1]) 
             for _data in self.vg_image_data
         }
@@ -178,6 +186,8 @@ class AugmentedCaptionDataset(Dataset):
         anno = self.data[index]
         image_id = anno["image_id"]
         image_path = self.id2path[image_id if 'sed' in self.vg_path else int(image_id)]
+        if self.stream:
+            image_path = io.BytesIO(requests.get(image_path).content)
         if self.sample_strategy == "online":
             chosen = random.choice(anno["chosen"])
             rejected = random.choice(anno["rejected"])
