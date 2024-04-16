@@ -2,6 +2,7 @@
 *.png
 *.jpg
 *.pth
+*.pt
 *.csv
 *.txt
 *.safetensors
