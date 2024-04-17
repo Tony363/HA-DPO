@@ -79,18 +79,19 @@ def load_chat(
     annotate:bool=False,
 )->Tuple[ChatInference,torch.nn.Module]:
     cfg = Config(args)
-    # cfg.config['model']['vit_model'] = 'musiq' # TODO automate this 
     model_config = cfg.model_cfg
     model_config.device_8bit = args.gpu_id
     model_config.classes = args.classes
     model_config.labels = args.labels
     
     model_cls = registry.get_model_class(model_config.arch)
-    model = model_cls.from_config(model_config).to(device='cuda:{}'.format(args.gpu_id))
+    model = model_cls.from_config(model_config).to(device='{}'.format(args.gpu_id))
 
     vis_processor_cfg = cfg.datasets_cfg.cc_sbu_align.vis_processor.train
     vis_processor = registry.get_processor_class(vis_processor_cfg.name).from_config(vis_processor_cfg)
-    chat = ChatInference(model, vis_processor, device='cuda:{}'.format(args.gpu_id),annotate=annotate,conv_rec=3)
+    chat = ChatInference(model, vis_processor, device='{}'.format(args.gpu_id),annotate=annotate,conv_rec=3)
+    
+    chat.model = chat.model.to(device='{}'.format(args.gpu_id))
     print(f"USING DEVICE - {chat.model.device}")
     # https://stackoverflow.com/questions/69546459/convert-hydra-omegaconf-config-to-python-nested-dict-list
     return chat,model
@@ -182,7 +183,7 @@ def main(
         print(f"MESSAGE - {message}")
 
         print(f"PROMPT - {chat.default_prompt}")
-        a = chat.answer(queries,repetition_penalty=1.0)[0] # 1.0 is no penalty
+        a = chat.answer(queries,repetition_penalty=0,temperature=0)[0] # 1.0 is no penalty
         print(f"ANSWER - {a}") 
         
         # pred = evaluate_caption(captions,a,meteor,scores)
@@ -256,7 +257,7 @@ def parse_args():
 
     parser.add_argument('-cfg-path',"--cfg-path", required=True, help="path to configuration file.")
     parser.add_argument('-classes',"--classes",type=int, default=3,help="The number of classes")
-    parser.add_argument("--gpu-id", type=int, default=0, help="specify the gpu to load the model.")
+    parser.add_argument("--gpu-id", type=str, default='cuda:0', help="specify the gpu to load the model.")
     parser.add_argument(
         "--test-dir", 
         type=str, 
@@ -308,7 +309,7 @@ if __name__ == "__main__":
     """
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id 0 \
+        --gpu-id cuda:0 \
         --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_training/image \
         --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_training/filter_cap.json\
         --desc-data /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/sed_desc_data.json \
@@ -316,7 +317,7 @@ if __name__ == "__main__":
         
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id 0 \
+        --gpu-id cuda:0 \
         --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
         --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_hadpo.txt
        
@@ -324,28 +325,28 @@ if __name__ == "__main__":
         
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id 0 \
+        --gpu-id cuda:0 \
         --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
         --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json\
         --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_bal_baseline_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_base.txt
     
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id 0 \
+        --gpu-id cuda:0 \
         --test-dir /home/tony/daisee/image \
         --label-path /home/tony/daisee/filter_cap.json\
         --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/daisee_baseline_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_daisee_base.txt
     
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id 0 \
+        --gpu-id cuda:0 \
         --test-dir /home/tony/handpicked/image \
         --label-path /home/tony/handpicked/filter_cap.json\
         --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/handpicked_baseline_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_handpicked_base.txt
         
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id 0 \
+        --gpu-id cda:0 \
         --test-dir /home/tony/luraw_sed_testing/image \
         --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json\
         --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_raw_base_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_raw_base.txt
@@ -356,28 +357,28 @@ if __name__ == "__main__":
         
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id 0 \
+        --gpu-id cuda:0 \
         --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
         --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json\
         --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_bal_general_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_general.txt
     
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id 0 \
+        --gpu-id cuda:0 \
         --test-dir /home/tony/daisee/image \
         --label-path /home/tony/daisee/filter_cap.json\
         --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/daisee_general_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_daisee_general.txt
     
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id 0 \
+        --gpu-id cuda:0 \
         --test-dir /home/tony/handpicked/image \
         --label-path /home/tony/handpicked/filter_cap.json\
         --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/handpicked_general_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_handpicked_general.txt
 
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id 0 \
+        --gpu-id cuda:0 \
         --test-dir /home/tony/luraw_sed_testing/image \
         --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json\
         --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_general_raw_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_raw_general.txt   
@@ -386,28 +387,28 @@ if __name__ == "__main__":
         
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id 0 \
+        --gpu-id cuda:0 \
         --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
         --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json\
         --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_bal_sed_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_sed.txt
     
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id 0 \
+        --gpu-id cuda:0 \
         --test-dir /home/tony/daisee/image \
         --label-path /home/tony/daisee/filter_cap.json\
         --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/daisee_sed_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_daisee_sed.txt
     
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id 0 \
+        --gpu-id cuda:0 \
         --test-dir /home/tony/handpicked/image \
         --label-path /home/tony/handpicked/filter_cap.json\
         --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/handpicked_sed_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_handpicked_sed.txt
     
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id 0 \
+        --gpu-id cuda:0 \
         --test-dir /home/tony/luraw_sed_testing/image \
         --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json\
         --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_raw_sed_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_raw_sed.txt

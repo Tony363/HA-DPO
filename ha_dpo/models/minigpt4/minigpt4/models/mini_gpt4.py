@@ -111,7 +111,7 @@ class MiniGPT4(Blip2Base):
             llama_model,
             low_cpu_mem_usage=True,
             torch_dtype=torch.float16,
-            load_in_4bit=True,
+            # load_in_4bit=True,
             #load_in_8bit=True,
             #device_map=device_map,
         )
@@ -375,7 +375,13 @@ class MiniGPT4(Blip2Base):
         ckpt_path = cfg.get("ckpt", "")  # load weights of MiniGPT-4
         if ckpt_path:
             print("Load BLIP2-LLM Checkpoint: {}".format(ckpt_path))
+            # print("ARCH")
+            # for name, param in model.named_parameters():
+            #     print(name)
             ckpt = torch.load(ckpt_path, map_location="cpu")
+            # print("CKPT")
+            # for name in ckpt['model'].keys():
+            #     print(name)
             msg = model.load_state_dict(ckpt['model'], strict=False)
 
         return model
