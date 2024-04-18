@@ -7,6 +7,7 @@ from test_student import load_chat,parse_args
 def main()->None:
     args = parse_args()
     chat,model = load_chat(args=args,annotate=False) 
+    print()
     print("ARCH")
     for name,param in model.named_parameters():
         print(name)
@@ -23,7 +24,7 @@ def main()->None:
             file_path = os.path.join(directory, filename)
             cw = load_file(file_path)    
             weights['model'].update(cw)
-            
+    print()
     print("DPO WEIGHTS")
     header = ('llama_proj','llama_model',)
     layers = copy.deepcopy(list(weights['model'].keys()))

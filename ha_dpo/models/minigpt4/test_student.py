@@ -122,7 +122,7 @@ def aug_res(
     # Initialize augmenter
     augmenter = naw.SynonymAug(aug_src='wordnet')
     # Augment data
-    augs = []
+    augs = [res]
     for _ in range(n_aug):
         aug = augmenter.augment(res)
         if not aug:
@@ -150,7 +150,7 @@ def main(
         'Person is looking down at the paper',
         'Person is looking away'
     ]
-    
+    desc_prompt = "Describe this image in detail."
     queries = 'Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?'
     f1_micro = torchmetrics.F1Score(task="multiclass", num_classes=num_classes,average='micro').to(chat.model.device) # average=None for all classes eval
     pr_micro = torchmetrics.Precision(task="multiclass", average='micro', num_classes=num_classes).to(chat.model.device)
@@ -183,7 +183,7 @@ def main(
         print(f"MESSAGE - {message}")
 
         print(f"PROMPT - {chat.default_prompt}")
-        a = chat.answer(queries,repetition_penalty=0,temperature=0)[0] # 1.0 is no penalty
+        a = chat.answer(queries,repetition_penalty=1.5,temperature=0.1)[0] # 1.0 is no penalty
         print(f"ANSWER - {a}") 
         
         # pred = evaluate_caption(captions,a,meteor,scores)
@@ -191,10 +191,11 @@ def main(
         pred_table[sample] = pred
         if pred_table[sample] !=  target_table[sample]:
             pred_table[sample] = (target_table[sample] - 1) % num_classes
+            detail_msg = chat.answer(desc_prompt,repetition_penalty=1.5,temperature=0.1)[0]
             desc_data.append({
                 'image_id':image_id, 
                 'chosen': aug_res(res=label[image_id][-1],n_aug=5),
-                'rejected':aug_res(res=a,n_aug=5),
+                'rejected':aug_res(res=detail_msg,n_aug=5),
             })
             pope_data.append({
                 'image_id':image_id, 
@@ -235,9 +236,9 @@ def get_test_labels(
 )->dict:
     label = {}
     classes = np.array([
-        [0,'screen',"Person is looking straight at the screen"],
-        [1,'paper',"Person is looking down at the paper"],
-        [2,'away',"Person is looking away"]
+        [0,'screen',"The person is looking straight at the screen"],
+        [1,'paper',"The person is looking down at the paper"],
+        [2,'away',"The person is looking away"]
     ])
     with open(label_path,'r') as f:
         captions = json.load(f)
@@ -307,6 +308,7 @@ def parse_args():
 
 if __name__ == "__main__":
     """
+    lu runs batch size of 6
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
         --gpu-id cuda:0 \
