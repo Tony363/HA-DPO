@@ -295,6 +295,12 @@ if __name__ == "__main__":
     --output_dir 'ha_dpo/models/minigpt4/minigpt4/output/minigpt4_kto' \
     --logging_steps 4    
       
+    python ha_dpo/models/minigpt4/merge_peft_adapter.py \
+    --adapter_model_name ha_dpo/models/minigpt4/minigpt4/output/minigpt4_kto \
+    --base_model_name wangrongsheng/MiniGPT-4-LLaMA-7B \
+    --output_name ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_hakto
+      
+      
     WANDB_MODE=dryrun accelerate launch --main_process_port $RANDOM ha_dpo/models/minigpt4/train_dpo.py \
     --cfg_path ha_dpo/models/minigpt4/train_configs/minigpt4_llama2_stage3_dpo.yaml \
     --auxilary True \
@@ -315,6 +321,12 @@ if __name__ == "__main__":
     --max_steps 1000 \
     --output_dir 'ha_dpo/models/minigpt4/minigpt4/output/minigpt4_ipo' \
     --logging_steps 4          
+    
+    python ha_dpo/models/minigpt4/merge_peft_adapter.py \
+    --adapter_model_name ha_dpo/models/minigpt4/minigpt4/output/minigpt4_ipo \
+    --base_model_name wangrongsheng/MiniGPT-4-LLaMA-7B \
+    --output_name ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_haipo
+    
     
     WANDB_MODE=dryrun accelerate launch --main_process_port $RANDOM ha_dpo/models/minigpt4/train_dpo.py \
     --cfg_path ha_dpo/models/minigpt4/train_configs/minigpt4_llama2_stage3_dpo.yaml \
@@ -337,6 +349,12 @@ if __name__ == "__main__":
     --output_dir 'ha_dpo/models/minigpt4/minigpt4/output/minigpt4_rso' \
     --logging_steps 4   
     
+    
+    python ha_dpo/models/minigpt4/merge_peft_adapter.py \
+    --adapter_model_name ha_dpo/models/minigpt4/minigpt4/output/minigpt4_rso \
+    --base_model_name wangrongsheng/MiniGPT-4-LLaMA-7B \
+    --output_name ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_harso
+    
     WANDB_MODE=dryrun accelerate launch --main_process_port $RANDOM ha_dpo/models/minigpt4/train_dpo.py \
     --cfg_path ha_dpo/models/minigpt4/train_configs/minigpt4_llama2_stage3_dpo.yaml \
     --auxilary True \
@@ -356,7 +374,12 @@ if __name__ == "__main__":
     --gradient_accumulation_steps 4 \
     --max_steps 1000 \
     --output_dir 'ha_dpo/models/minigpt4/minigpt4/output/minigpt4_cdpo' \
-    --logging_steps 4                                                                                  
+    --logging_steps 4                            
+    
+    python ha_dpo/models/minigpt4/merge_peft_adapter.py \
+    --adapter_model_name ha_dpo/models/minigpt4/minigpt4/output/ha_cdpo \
+    --base_model_name wangrongsheng/MiniGPT-4-LLaMA-7B \
+    --output_name ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_hacdpo                                                   
     """
     main()
 

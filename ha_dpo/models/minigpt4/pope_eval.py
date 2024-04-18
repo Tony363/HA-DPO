@@ -77,6 +77,37 @@ def convert_dict_to_tensor(results, device):
 # ========================================
 
 if __name__ == "__main__":
+    
+    '''
+    torchrun --nproc-per-node 1 --master-port $RANDOM ha_dpo/models/minigpt4/pope_eval.py \
+    --set popular \
+    --cfg-path ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml \
+    --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_hakto \
+    --pope-path ha_dpo/data/POPE \
+    --coco-path /home/tony/HA-DPO/ha_dpo/data/coco2014 > logs/pope_kto_eval.txt
+    
+    
+    torchrun --nproc-per-node 1 --master-port $RANDOM ha_dpo/models/minigpt4/pope_eval.py \
+    --set popular \
+    --cfg-path ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml \
+    --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_harso \
+    --pope-path ha_dpo/data/POPE \
+    --coco-path /home/tony/HA-DPO/ha_dpo/data/coco2014 > logs/pope_rso_eval.txt
+    
+    torchrun --nproc-per-node 1 --master-port $RANDOM ha_dpo/models/minigpt4/pope_eval.py \
+    --set popular \
+    --cfg-path ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml \
+    --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_haipo \
+    --pope-path ha_dpo/data/POPE \
+    --coco-path /home/tony/HA-DPO/ha_dpo/data/coco2014 > logs/pope_ipo_eval.txt
+    
+    torchrun --nproc-per-node 1 --master-port $RANDOM ha_dpo/models/minigpt4/pope_eval.py \
+    --set popular \
+    --cfg-path ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml \
+    --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_hacdpo \
+    --pope-path ha_dpo/data/POPE \
+    --coco-path /home/tony/HA-DPO/ha_dpo/data/coco2014 > logs/pope_cdpo_eval.txt
+    '''
     timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     logging.info('Initializing Chat')
     args = parse_args()
@@ -119,7 +150,7 @@ if __name__ == "__main__":
     if args.set == "adv":
         questions_file = open(os.path.join(args.pope_path, "output/coco/coco_pope_adversarial.json"), "r")
     lines = list(questions_file.readlines())
-
+    print(lines)
     rank, word_size = get_rank(), get_world_size()
     step = len(lines) // word_size + 1
     start, end = rank * step, (rank + 1) * step

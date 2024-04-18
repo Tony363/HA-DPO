@@ -83,7 +83,12 @@ def load_chat(
     model_config.device_8bit = args.gpu_id
     model_config.classes = args.classes
     model_config.labels = args.labels
-    
+    print("LLAMA MODEL PATH",args.llama_model)
+    if args.llama_model is not None:
+        model_config.llama_model = args.llama_model
+
+    print(f"llama model: {model_config.llama_model}")
+
     model_cls = registry.get_model_class(model_config.arch)
     model = model_cls.from_config(model_config).to(device='{}'.format(args.gpu_id))
 
@@ -301,6 +306,11 @@ def parse_args():
         "in xxx=yyy format will be merged into config file (deprecate), "
         "change to --cfg-options instead.",
     )
+    parser.add_argument(
+        "--llama-model", 
+        default=None, 
+        help="path to language model file."
+    )
 
     args = parser.parse_args()
     return args
@@ -321,7 +331,8 @@ if __name__ == "__main__":
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
         --gpu-id cuda:0 \
         --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
-        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_hadpo.txt
+        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json 
+        --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hadpo > /home/tony/HA-DPO/logs/minigpt4_eval_sed_hadpo.txt
        
        
         

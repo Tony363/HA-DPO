@@ -31,10 +31,11 @@ def main()->None:
     for name in layers:
         layer = name.split('.')
         weights['model'][f'{header[int(len(layer) != 2)]}.{name}'] = weights['model'].pop(name)
+        print(f'{header[int(len(layer) != 2)]}.{name}')
     torch.save(weights, os.path.join(directory,'hadpo_minigpt4_sed.pth'))
     
     
-    
+
 
 if __name__ == "__main__":
     """
