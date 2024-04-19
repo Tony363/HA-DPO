@@ -257,7 +257,7 @@ class ChatInference:
         self.stopping_criteria = StoppingCriteriaList([StoppingCriteriaSub(stops=stop_words_ids)])
 
         self.default_prompt = [
-            'Give the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>',
+            'Given the following image: <Img>ImageContent</Img>. You will be able to see the image once I provide it to you. Please answer my questions.###Human: <Img>',
             '</Img> '
         ]
         self.img_list = [None]

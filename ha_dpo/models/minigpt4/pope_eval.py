@@ -150,7 +150,6 @@ if __name__ == "__main__":
     if args.set == "adv":
         questions_file = open(os.path.join(args.pope_path, "output/coco/coco_pope_adversarial.json"), "r")
     lines = list(questions_file.readlines())
-    print(lines)
     rank, word_size = get_rank(), get_world_size()
     step = len(lines) // word_size + 1
     start, end = rank * step, (rank + 1) * step
