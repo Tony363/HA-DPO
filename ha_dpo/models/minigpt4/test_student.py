@@ -150,11 +150,11 @@ def main(
     )
     tokenizer, classifier = text_classifier(model_name="/home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/distillbert")
 
-    captions = [
-        'Person is looking straight at the screen',
-        'Person is looking down at the paper',
-        'Person is looking away'
-    ]
+    # captions = [
+    #     'Person is looking straight at the screen',
+    #     'Person is looking down at the paper',
+    #     'Person is looking away'
+    # ]
     desc_prompt = "Describe this image in detail."
     queries = 'Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?'
     f1_micro = torchmetrics.F1Score(task="multiclass", num_classes=num_classes,average='micro').to(chat.model.device) # average=None for all classes eval
@@ -325,13 +325,13 @@ if __name__ == "__main__":
         --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_training/image \
         --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_training/filter_cap.json\
         --desc-data /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/sed_desc_data.json \
-        --pope-data /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/sed_pope_data.json > /home/tony/HA-DPO/logs/minigpt4_train_sed_base.txt
+        --pope-data /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/sed_pope_data.json > /home/tony/HA-DPO/logs/minigpt4_train_bal_sed.txt
         
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
         --gpu-id cuda:0 \
         --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
-        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json 
+        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json \
         --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hadpo > /home/tony/HA-DPO/logs/minigpt4_eval_sed_hadpo.txt
        
        

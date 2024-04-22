@@ -377,7 +377,7 @@ if __name__ == "__main__":
     --logging_steps 4                            
     
     python ha_dpo/models/minigpt4/merge_peft_adapter.py \
-    --adapter_model_name ha_dpo/models/minigpt4/minigpt4/output/ha_cdpo \
+    --adapter_model_name ha_dpo/models/minigpt4/minigpt4/output/minigpt4_cdpo \
     --base_model_name wangrongsheng/MiniGPT-4-LLaMA-7B \
     --output_name ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_hacdpo                                                   
     """

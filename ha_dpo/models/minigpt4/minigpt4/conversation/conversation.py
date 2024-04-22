@@ -370,7 +370,7 @@ class ChatInference:
         ]
         
         """
-        text = f'{text} ###Assistant: '
+        text = f'{text}###Assistant:'
         
         if self.annotate or len(self.default_prompt) > self.conv_rec + 1:
             self.default_prompt.pop(3)
