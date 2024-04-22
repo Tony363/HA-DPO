@@ -338,7 +338,7 @@ if __name__ == "__main__":
         --gpu-id cuda:0 \
         --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
         --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json \
-        --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hadpo > /home/tony/HA-DPO/logs/minigpt4_eval_sed_hadpo.txt
+        --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hakto > /home/tony/HA-DPO/logs/minigpt4_eval_sed_hakto.txt
        
        
         
@@ -352,22 +352,19 @@ if __name__ == "__main__":
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
         --gpu-id cuda:0 \
         --test-dir /home/tony/daisee/image \
-        --label-path /home/tony/daisee/filter_cap.json\
-        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/daisee_baseline_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_daisee_base.txt
+        --label-path /home/tony/daisee/filter_cap.json > /home/tony/HA-DPO/logs/minigpt4_eval_daisee_base.txt
     
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
         --gpu-id cuda:0 \
         --test-dir /home/tony/handpicked/image \
-        --label-path /home/tony/handpicked/filter_cap.json\
-        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/handpicked_baseline_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_handpicked_base.txt
+        --label-path /home/tony/handpicked/filter_cap.json /home/tony/HA-DPO/logs/minigpt4_eval_handpicked_base.txt
         
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
         --gpu-id cda:0 \
         --test-dir /home/tony/luraw_sed_testing/image \
-        --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json\
-        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_raw_base_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_raw_base.txt
+        --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json > /home/tony/HA-DPO/logs/minigpt4_eval_raw_base.txt
         
         
         
@@ -377,29 +374,25 @@ if __name__ == "__main__":
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
         --gpu-id cuda:0 \
         --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
-        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json\
-        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_bal_general_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_general.txt
+        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_general.txt
     
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
         --gpu-id cuda:0 \
         --test-dir /home/tony/daisee/image \
-        --label-path /home/tony/daisee/filter_cap.json\
-        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/daisee_general_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_daisee_general.txt
+        --label-path /home/tony/daisee/filter_cap.json > /home/tony/HA-DPO/logs/minigpt4_eval_daisee_general.txt
     
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
         --gpu-id cuda:0 \
         --test-dir /home/tony/handpicked/image \
-        --label-path /home/tony/handpicked/filter_cap.json\
-        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/handpicked_general_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_handpicked_general.txt
+        --label-path /home/tony/handpicked/filter_cap.json /home/tony/HA-DPO/logs/minigpt4_eval_handpicked_general.txt
 
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
         --gpu-id cuda:0 \
         --test-dir /home/tony/luraw_sed_testing/image \
-        --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json\
-        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_general_raw_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_raw_general.txt   
+        --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json > /home/tony/HA-DPO/logs/minigpt4_eval_raw_general.txt   
         
         
         
@@ -413,24 +406,19 @@ if __name__ == "__main__":
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
         --gpu-id cuda:0 \
         --test-dir /home/tony/daisee/image \
-        --label-path /home/tony/daisee/filter_cap.json\
-        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/daisee_sed_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_daisee_sed.txt
+        --label-path /home/tony/daisee/filter_cap.json > /home/tony/HA-DPO/logs/minigpt4_eval_daisee_sed.txt
     
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
         --gpu-id cuda:0 \
         --test-dir /home/tony/handpicked/image \
-        --label-path /home/tony/handpicked/filter_cap.json\
-        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/handpicked_sed_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_handpicked_sed.txt
+        --label-path /home/tony/handpicked/filter_cap.json > /home/tony/HA-DPO/logs/minigpt4_eval_handpicked_sed.txt
     
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
         --gpu-id cuda:0 \
         --test-dir /home/tony/luraw_sed_testing/image \
-        --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json\
-        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_raw_sed_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_raw_sed.txt
-    
-    
+        --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json > /home/tony/HA-DPO/logs/minigpt4_eval_raw_sed.txt
     
     """
     main() 

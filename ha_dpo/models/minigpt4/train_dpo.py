@@ -258,19 +258,18 @@ if __name__ == "__main__":
     --beta 0.1 \
     --gamma 0.5 \
     --reference_free False\
-    --loss_type sigmoid \
+    --loss_type kto_pair \
     --label_smoothing 0 \
     --gradient_accumulation_steps 1 \
     --max_steps 1000 \
-    --output_dir ha_dpo/models/minigpt4/minigpt4/output/sed_minigpt4_hadpo \
+    --output_dir ha_dpo/models/minigpt4/minigpt4/output/sed_minigpt4_hakto \
     --logging_steps 4 
-    > logs/sed_minigpt4_hadpo_student.txt
     
     
     python ha_dpo/models/minigpt4/merge_peft_adapter.py \
-    --adapter_model_name ha_dpo/models/minigpt4/minigpt4/output/sed_minigpt4_hadpo\
+    --adapter_model_name ha_dpo/models/minigpt4/minigpt4/output/sed_minigpt4_hakto\
     --base_model_name wangrongsheng/MiniGPT-4-LLaMA-7B\
-    --output_name ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hadpo
+    --output_name ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hakto
     
     
     
