@@ -225,11 +225,12 @@ def main(
         eval_df.iloc[sample,3] = pred_table[sample].item()
         eval_df.iloc[sample,4] = target_table[sample].item()
     
-    with open(args.desc_data,'w') as f:
-        json.dump(desc_data,f,indent=4)
-    
-    with open(args.pope_data,'w') as f:
-        json.dump(pope_data,f,indent=4)
+    if args.dpo_pairs:
+        with open(args.desc_data,'w') as f:
+            json.dump(desc_data,f,indent=4)
+        
+        with open(args.pope_data,'w') as f:
+            json.dump(pope_data,f,indent=4)
     
     out_file = args.test_dir.split('/')[-2]
     eval_df.columns = ['image_id','question','answer','pred','label']
@@ -311,7 +312,11 @@ def parse_args():
         default=None, 
         help="path to language model file."
     )
-
+    parser.add_argument(
+        "--dpo-pairs", 
+        action='store_true',
+        help="whether to save desc and pope data pairs"
+    )
     args = parser.parse_args()
     return args
 
@@ -325,7 +330,8 @@ if __name__ == "__main__":
         --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_training/image \
         --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_training/filter_cap.json\
         --desc-data /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/sed_desc_data.json \
-        --pope-data /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/sed_pope_data.json > /home/tony/HA-DPO/logs/minigpt4_train_bal_sed.txt
+        --pope-data /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/sed_pope_data.json \
+        --dpo-pairs > /home/tony/HA-DPO/logs/minigpt4_train_bal_sed.txt
         
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
@@ -340,8 +346,7 @@ if __name__ == "__main__":
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
         --gpu-id cuda:0 \
         --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
-        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json\
-        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_bal_baseline_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_base.txt
+        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_base.txt
     
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
@@ -402,8 +407,7 @@ if __name__ == "__main__":
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
         --gpu-id cuda:0 \
         --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
-        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json\
-        --dpo-pairs /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/testing_bal_sed_pairs.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_sed.txt
+        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_sed.txt
     
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
