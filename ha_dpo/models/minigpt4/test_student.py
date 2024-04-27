@@ -80,7 +80,7 @@ def load_chat(
 )->Tuple[ChatInference,torch.nn.Module]:
     cfg = Config(args)
     model_config = cfg.model_cfg
-    model_config.device_8bit = args.gpu_id
+    model_config.device_8bit = int(args.gpu_id.split(':')[-1])
     model_config.classes = args.classes
     model_config.labels = args.labels
     print("LLAMA MODEL PATH",args.llama_model)
@@ -91,7 +91,7 @@ def load_chat(
 
     model_cls = registry.get_model_class(model_config.arch)
     model = model_cls.from_config(model_config).to(device='{}'.format(args.gpu_id))
-
+    
     vis_processor_cfg = cfg.datasets_cfg.cc_sbu_align.vis_processor.train
     vis_processor = registry.get_processor_class(vis_processor_cfg.name).from_config(vis_processor_cfg)
     chat = ChatInference(model, vis_processor, device='{}'.format(args.gpu_id),annotate=annotate,conv_rec=3)
@@ -135,8 +135,63 @@ def aug_res(
         augs.extend(aug)
     return augs
 
+def keyword_eval(
+    num_classes:int=3,
+)->None:
+    # init_logger()
+    args = parse_args()
+    setup_seeds(1000)
+    chat,model = load_chat(args=args,annotate=False)    
+    label = get_test_labels(
+        label_path=args.label_path
+    )
+    torch.set_default_device(f'{args.gpu_id}')
+    queries = 'Is the person looking straight at the screen? Is the person looking down at the paper? Is the person looking away?'
+    f1_micro = torchmetrics.F1Score(task="multiclass", num_classes=num_classes,average='micro').to(chat.model.device) # average=None for all classes eval
+    pr_micro = torchmetrics.Precision(task="multiclass", average='micro', num_classes=num_classes).to(chat.model.device)
+    re_micro = torchmetrics.Recall(task="multiclass", average='micro', num_classes=num_classes).to(chat.model.device)
+    f1_macro = torchmetrics.F1Score(task="multiclass", num_classes=num_classes,average='macro').to(chat.model.device)
+    pr_macro = torchmetrics.Precision(task="multiclass", average='macro', num_classes=num_classes).to(chat.model.device)
+    re_macro = torchmetrics.Recall(task="multiclass", average='macro', num_classes=num_classes).to(chat.model.device)
+    
+    inference_samples = len(os.listdir(args.test_dir))
+    pred_table,target_table = torch.zeros(inference_samples).to(chat.model.device),torch.zeros(inference_samples).to(chat.model.device)
 
-def main(
+    for sample,img_f in enumerate(os.listdir(args.test_dir)): 
+        if sample >= inference_samples:
+            break
+        
+        image_id = img_f.split('.')[0]
+        print(f"IMAGE - {image_id}")
+        print(f"LABEL - {label[img_f.replace('.jpg','')]}")
+        target_table[sample] = int(label[img_f.replace('.jpg','')][0]) 
+
+        message = chat.upload_img(os.path.join(args.test_dir,img_f))
+        print(f"MESSAGE - {message}")
+
+        print(f"QUERY - {queries}")
+        a = chat.answer(queries,repetition_penalty=1.0)[0] # 1.0 is no penalty
+        print(f"ANSWER - {a}") 
+         
+        pred_table[sample] = target_table[sample]
+        if label[img_f.replace('.jpg','')][1] not in a.lower():
+            pred_table[sample] = (target_table[sample] - 1) % num_classes
+        elif get_reject(label[img_f.replace('.jpg','')][1])[0] in a.lower() or get_reject(label[img_f.replace('.jpg','')][1])[1] in a.lower():
+            pred_table[sample] = (target_table[sample] - 1) % num_classes
+
+            # logging.debug(f"PROMPT - {chat.default_prompt}")
+            # dpo_sample['rejected'] = a
+        
+        pred, target = pred_table[:sample+1],target_table[:sample+1]
+        f1_a,pr_a,rec_a = f1_macro(pred,target), pr_macro(pred,target),re_macro(pred,target)
+        f1_i,pr_i,rec_i = f1_micro(pred,target), pr_micro(pred,target),re_micro(pred,target)
+        print("FREE FORM MACRO: f1 - {:.3f}, pr - {:.3f}, re - {:.3f}".format(f1_a.item(),pr_a.item(),rec_a.item()))
+        print("FREE FORM MICRO: f1 - {:.3f}, pr - {:.3f}, re - {:.3f}".format(f1_i.item(),pr_i.item(),rec_i.item()))
+        
+
+    
+
+def bert_eval(
     num_classes:int=3,
     desc_data:list=[],
     pope_data:list=[],
@@ -242,9 +297,9 @@ def get_test_labels(
 )->dict:
     label = {}
     classes = np.array([
-        [0,'screen',"The person is looking straight at the screen"],
-        [1,'paper',"The person is looking down at the paper"],
-        [2,'away',"The person is looking away"]
+        [0,'screen',"Person is looking straight at the screen"],
+        [1,'paper',"Person is looking down at the paper"],
+        [2,'away',"Person is looking away"]
     ])
     with open(label_path,'r') as f:
         captions = json.load(f)
@@ -321,6 +376,10 @@ def parse_args():
     return args
 
 
+def main()->None:
+    # keyword_eval()
+    bert_eval()
+
 if __name__ == "__main__":
     """
     lu runs batch size of 6
@@ -339,8 +398,62 @@ if __name__ == "__main__":
         --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
         --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json \
         --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hakto > /home/tony/HA-DPO/logs/minigpt4_eval_sed_hakto.txt
+        
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id cuda:0 \
+        --test-dir /home/tony/luraw_sed_testing/image \
+        --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json \
+        --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hakto > /home/tony/HA-DPO/logs/minigpt4_eval_raw_hakto.txt
+      
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id cuda:0 \
+        --test-dir /home/tony/daisee/image \
+        --label-path /home/tony/daisee/filter_cap.json \
+        --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hakto > /home/tony/HA-DPO/logs/minigpt4_eval_daisee_hakto.txt
+        
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id cuda:0 \
+        --test-dir /home/tony/handpicked/image \
+        --label-path /home/tony/handpicked/filter_cap.json \
+        --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hakto > /home/tony/HA-DPO/logs/minigpt4_eval_handpicked_hakto.txt
+    
+    
+      
        
-       
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id cuda:0 \
+        --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
+        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json \
+        --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hadpo > /home/tony/HA-DPO/logs/minigpt4_eval_sed_hadpo.txt 
+        
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id cuda:0 \
+        --test-dir /home/tony/luraw_sed_testing/image \
+        --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json \
+        --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hadpo > /home/tony/HA-DPO/logs/minigpt4_eval_raw_hadpo.txt 
+        
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id cuda:0 \
+        --test-dir /home/tony/daisee/image \
+        --label-path /home/tony/daisee/filter_cap.json \
+        --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hadpo > /home/tony/HA-DPO/logs/minigpt4_eval_daisee_hadpo.txt
+        
+    python test_student.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id cuda:0 \
+        --test-dir /home/tony/handpicked/image \
+        --label-path /home/tony/handpicked/filter_cap.json \
+        --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_sed_minigpt4_hadpo > /home/tony/HA-DPO/logs/minigpt4_eval_handpicked_hadpo.txt        
+        
+        
+        
+        
         
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
@@ -362,7 +475,7 @@ if __name__ == "__main__":
         
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id cda:0 \
+        --gpu-id cuda:0 \
         --test-dir /home/tony/luraw_sed_testing/image \
         --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json > /home/tony/HA-DPO/logs/minigpt4_eval_raw_base.txt
         
@@ -400,7 +513,7 @@ if __name__ == "__main__":
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
         --gpu-id cuda:0 \
         --test-dir /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/image \
-        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_sed.txt
+        --label-path /home/tony/HA-DPO/ha_dpo/data/lubal_sed_testing/filter_cap.json > /home/tony/HA-DPO/logs/minigpt4_eval_sed_bal.txt
     
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
@@ -416,7 +529,7 @@ if __name__ == "__main__":
     
     python test_student.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id cuda:0 \
+        --gpu-id cuda:1 \
         --test-dir /home/tony/luraw_sed_testing/image \
         --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json > /home/tony/HA-DPO/logs/minigpt4_eval_raw_sed.txt
     

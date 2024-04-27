@@ -35,12 +35,26 @@ def main()->None:
     torch.save(weights, os.path.join(directory,'hadpo_minigpt4_sed.pth'))
     
     
-
+def check_device()->None:
+    args = parse_args()
+    chat,model = load_chat(args=args,annotate=False) 
+    print()
+    print("ARCH")
+    for name,param in model.named_parameters():
+        print(name, param.device)
 
 if __name__ == "__main__":
     """
     python to_ckpt.py \
         --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
-        --gpu-id cpu > /home/tony/HA-DPO/logs/ha_dpo_weights.txt
+        --gpu-id cpu > /home/tony/HA-DPO/logs/ha_dpo_weights.
+        
+        
+    python to_ckpt.py \
+        --cfg-path /home/tony/HA-DPO/ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml  \
+        --gpu-id cuda:1 \
+        --test-dir /home/tony/luraw_sed_testing/image \
+        --label-path /home/tony/luraw_sed_testing/filter_cap_raw.json > /home/tony/HA-DPO/logs/check_device.txt
     """
-    main()
+    # main()
+    check_device()

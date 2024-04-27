@@ -378,7 +378,36 @@ if __name__ == "__main__":
     python ha_dpo/models/minigpt4/merge_peft_adapter.py \
     --adapter_model_name ha_dpo/models/minigpt4/minigpt4/output/minigpt4_cdpo \
     --base_model_name wangrongsheng/MiniGPT-4-LLaMA-7B \
-    --output_name ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_hacdpo                                                   
+    --output_name ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_hacdpo  
+    
+    
+    
+    
+    WANDB_MODE=dryrun accelerate launch --main_process_port $RANDOM ha_dpo/models/minigpt4/train_dpo.py \
+    --cfg_path ha_dpo/models/minigpt4/train_configs/minigpt4_llama2_stage3_dpo.yaml \
+    --auxilary True \
+    --ccsbualign_data_path /home/tony/HA-DPO/ha_dpo/data/cc_sbu_align \
+    --pope_train_data_path /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/pope_data.json \
+    --desc_train_data_path /home/tony/HA-DPO/ha_dpo/data/hadpo/minigpt4/desc_data.json \
+    --vg_path /home/tony/HA-DPO/ha_dpo/data/VG \
+    --lora_r 64 \
+    --gradient_checkpointing False \
+    --per_device_train_batch_size 1 \
+    --learning_rate 1e-4 \
+    --beta 0.1 \
+    --gamma 0.5 \
+    --reference_free False\
+    --loss_type sigmoid \
+    --label_smoothing 0 \
+    --gradient_accumulation_steps 4 \
+    --max_steps 1000 \
+    --output_dir 'ha_dpo/models/minigpt4/minigpt4/output/minigpt4_dpo' \
+    --logging_steps 4                            
+    
+    python ha_dpo/models/minigpt4/merge_peft_adapter.py \
+    --adapter_model_name ha_dpo/models/minigpt4/minigpt4/output/minigpt4_dpo \
+    --base_model_name wangrongsheng/MiniGPT-4-LLaMA-7B \
+    --output_name ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_hadpo                                                    
     """
     main()
 

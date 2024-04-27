@@ -113,7 +113,7 @@ class MiniGPT4(Blip2Base):
             torch_dtype=torch.float16,
             load_in_4bit=True,
             #load_in_8bit=True,
-            #device_map=device_map,
+            device_map=device_8bit,
         )
         
         if lora_r > 0:
