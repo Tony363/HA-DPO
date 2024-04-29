@@ -27,6 +27,7 @@ def parse_args():
     parser.add_argument("--pope-path", required=True, help="path to POPE annotation file.")
     parser.add_argument("--set", required=True, help="which set of POPE, choose between random/popular/adv.")
     parser.add_argument("--llama-model", default=None, help="path to language model file.")
+    parser.add_argument("--gpu-id", type=str, default='cuda:0', help="specify the gpu to load the model.")
     parser.add_argument(
         "--options",
         nargs="+",
@@ -96,6 +97,7 @@ def main()->None:
     init_distributed_mode(cfg.run_cfg)
 
     model_config = cfg.model_cfg
+    # model_config.device_8bit = int(args.gpu_id.split(':')[-1])
     if args.llama_model is not None:
         model_config.llama_model = args.llama_model
 
@@ -214,34 +216,39 @@ if __name__ == "__main__":
     
     '''
     torchrun --nproc-per-node 1 --master-port $RANDOM ha_dpo/models/minigpt4/pope_eval.py \
-    --set adv \
+    --set popular \
     --cfg-path ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml \
     --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_hakto \
     --pope-path ha_dpo/data/POPE \
-    --coco-path /home/tony/HA-DPO/ha_dpo/data/coco2014
-    
+    --coco-path /home/tony/HA-DPO/ha_dpo/data/coco2014 
     
     torchrun --nproc-per-node 1 --master-port $RANDOM ha_dpo/models/minigpt4/pope_eval.py \
-    --set adv \
+    --set popular \
     --cfg-path ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml \
     --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_harso \
     --pope-path ha_dpo/data/POPE \
     --coco-path /home/tony/HA-DPO/ha_dpo/data/coco2014 
     
     torchrun --nproc-per-node 1 --master-port $RANDOM ha_dpo/models/minigpt4/pope_eval.py \
-    --set adv \
+    --set popular \
     --cfg-path ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml \
     --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_haipo \
     --pope-path ha_dpo/data/POPE \
     --coco-path /home/tony/HA-DPO/ha_dpo/data/coco2014 
     
     torchrun --nproc-per-node 1 --master-port $RANDOM ha_dpo/models/minigpt4/pope_eval.py \
-    --set adv \
+    --set popular \
     --cfg-path ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml \
     --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_hacdpo \
     --pope-path ha_dpo/data/POPE \
     --coco-path /home/tony/HA-DPO/ha_dpo/data/coco2014 
     
+    torchrun --nproc-per-node 1 --master-port $RANDOM ha_dpo/models/minigpt4/pope_eval.py \
+    --set popular \
+    --cfg-path ha_dpo/models/minigpt4/eval_configs/minigpt4_llama2_eval.yaml \
+    --llama-model /home/tony/HA-DPO/ha_dpo/models/minigpt4/minigpt4/output/merged_minigpt4_hadpo \
+    --pope-path ha_dpo/data/POPE \
+    --coco-path /home/tony/HA-DPO/ha_dpo/data/coco2014 
     
     torchrun --nproc-per-node 1 --master-port $RANDOM ha_dpo/models/minigpt4/pope_eval.py \
     --set adv \
@@ -250,5 +257,7 @@ if __name__ == "__main__":
     --coco-path /home/tony/HA-DPO/ha_dpo/data/coco2014
     
     
+    
+
     '''
     main()
