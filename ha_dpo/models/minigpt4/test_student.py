@@ -140,7 +140,7 @@ def keyword_eval(
 )->None:
     # init_logger()
     args = parse_args()
-    setup_seeds(1000)
+    setup_seeds(42)
     chat,model = load_chat(args=args,annotate=False)    
     label = get_test_labels(
         label_path=args.label_path
@@ -198,7 +198,7 @@ def bert_eval(
 )->None:
     # init_logger()
     args = parse_args()
-    setup_seeds(1000)
+    setup_seeds(42)
     chat,model = load_chat(args=args,annotate=False) 
     label = get_test_labels(
         label_path=args.label_path
